@@ -1,23 +1,1208 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>DUT Structural Engineering Research Group</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Structural Mechanics & Sustainable Structures Research Group, Faculty of Civil Engineering, The University of Danang - University of Science and Technology." />
+  <title>SMS Research Group | DUT</title>
+
+  <!-- Google Font -->
+  <script type="text/javascript" nonce="a93e257d1dbc4470a39ff0a810d" src="//local.adguard.org?ts=1790865536013&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_00000000a280820792168f7cf59b58e0%26fn%3Dindex_sms_dut.html%26cd%3Dattachment%26ts%3D497462%26p%3Dfs%26cid%3D1%26sig%3Def387cb90f493d56aa9e1ce0b8455ef4f6e0af0ac72a2879802e3f2220702f6d%26v%3D0&amp;app=chrome.exe&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=0&amp;stealth=1&amp;st-dnt"></script><script type="text/javascript" nonce="a93e257d1dbc4470a39ff0a810d" src="//local.adguard.org?ts=1790865536013&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script><link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <style>
+    :root{
+      --navy:#081a2f;
+      --navy-2:#0c2947;
+      --blue:#0d6efd;
+      --cyan:#21b6c7;
+      --gold:#f3b51b;
+      --text:#1f2937;
+      --muted:#667085;
+      --light:#f6f8fb;
+      --white:#ffffff;
+      --border:#e6eaf0;
+      --shadow:0 18px 45px rgba(8,26,47,.12);
+      --radius:20px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Inter",sans-serif;
+      color:var(--text);
+      background:var(--white);
+      line-height:1.65;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .container{
+      width:min(var(--max), calc(100% - 40px));
+      margin:auto;
+    }
+
+    /* ===== NAVIGATION ===== */
+    header{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      z-index:1000;
+      background:rgba(8,26,47,.88);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .nav{
+      height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:13px;
+      color:#fff;
+      min-width:260px;
+    }
+
+    .brand-mark{
+      width:44px;
+      height:44px;
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      font-weight:800;
+      letter-spacing:.4px;
+      background:linear-gradient(135deg,var(--cyan),var(--blue));
+      box-shadow:0 8px 20px rgba(13,110,253,.32);
+    }
+
+    .brand-text strong{
+      display:block;
+      font-size:15px;
+      line-height:1.2;
+    }
+
+    .brand-text span{
+      display:block;
+      font-size:11px;
+      color:#b9c7d8;
+      margin-top:3px;
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      align-items:center;
+      gap:24px;
+      padding:0;
+      margin:0;
+    }
+
+    nav a{
+      color:#dce5ef;
+      font-size:14px;
+      font-weight:600;
+      transition:.25s ease;
+    }
+
+    nav a:hover{color:#fff}
+
+    .nav-cta{
+      padding:10px 16px;
+      border-radius:999px;
+      background:#fff;
+      color:var(--navy);
+    }
+
+    .menu-btn{
+      display:none;
+      border:0;
+      background:transparent;
+      color:white;
+      font-size:24px;
+      cursor:pointer;
+    }
+
+    /* ===== HERO ===== */
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+      padding:125px 0 80px;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(33,182,199,.22), transparent 30%),
+        radial-gradient(circle at 65% 78%, rgba(13,110,253,.18), transparent 26%),
+        linear-gradient(135deg,#061426 0%,#0a2b4d 56%,#0a3f59 100%);
+      color:#fff;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      opacity:.16;
+      background-image:
+        linear-gradient(rgba(255,255,255,.22) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.22) 1px, transparent 1px);
+      background-size:52px 52px;
+      mask-image:linear-gradient(to bottom,black,transparent 90%);
+    }
+
+    .hero-grid{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1.12fr .88fr;
+      gap:70px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      padding:8px 12px;
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:999px;
+      background:rgba(255,255,255,.07);
+      color:#d9f8ff;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.4px;
+      margin-bottom:22px;
+    }
+
+    .hero h1{
+      margin:0 0 22px;
+      font-size:clamp(42px,6vw,72px);
+      line-height:1.05;
+      letter-spacing:-2.3px;
+      max-width:820px;
+    }
+
+    .hero h1 span{
+      background:linear-gradient(90deg,#58d7e5,#70a7ff);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .hero p{
+      max-width:760px;
+      font-size:18px;
+      color:#c7d6e7;
+      margin:0 0 30px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      padding:13px 20px;
+      border-radius:12px;
+      font-weight:700;
+      font-size:14px;
+      transition:.25s ease;
+    }
+
+    .btn-primary{
+      color:#fff;
+      background:linear-gradient(135deg,var(--blue),var(--cyan));
+      box-shadow:0 12px 30px rgba(13,110,253,.28);
+    }
+
+    .btn-primary:hover{transform:translateY(-2px)}
+
+    .btn-secondary{
+      color:#fff;
+      border:1px solid rgba(255,255,255,.22);
+      background:rgba(255,255,255,.06);
+    }
+
+    .hero-card{
+      position:relative;
+      padding:30px;
+      border-radius:28px;
+      background:rgba(255,255,255,.09);
+      border:1px solid rgba(255,255,255,.16);
+      backdrop-filter:blur(13px);
+      box-shadow:0 28px 65px rgba(0,0,0,.25);
+    }
+
+    .structure-art{
+      min-height:380px;
+      border-radius:20px;
+      overflow:hidden;
+      position:relative;
+      background:
+        linear-gradient(180deg, rgba(7,25,44,.15), rgba(7,25,44,.78)),
+        url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85") center/cover;
+    }
+
+    .structure-art::after{
+      content:"Research • Innovation • Collaboration";
+      position:absolute;
+      left:22px;
+      bottom:20px;
+      color:#fff;
+      font-weight:700;
+      letter-spacing:.3px;
+      font-size:14px;
+    }
+
+    .mini-stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      margin-top:14px;
+    }
+
+    .mini-stat{
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:14px;
+      padding:15px 12px;
+      text-align:center;
+    }
+
+    .mini-stat strong{
+      display:block;
+      font-size:22px;
+      color:white;
+      line-height:1.2;
+    }
+
+    .mini-stat span{
+      display:block;
+      margin-top:4px;
+      font-size:11px;
+      color:#bed0df;
+    }
+
+    /* ===== SHARED ===== */
+    section{padding:92px 0}
+
+    .section-head{
+      max-width:760px;
+      margin:0 auto 48px;
+      text-align:center;
+    }
+
+    .kicker{
+      text-transform:uppercase;
+      letter-spacing:1.6px;
+      color:var(--blue);
+      font-size:12px;
+      font-weight:800;
+      margin-bottom:10px;
+    }
+
+    .section-head h2{
+      margin:0 0 13px;
+      font-size:clamp(30px,4vw,46px);
+      line-height:1.15;
+      color:var(--navy);
+      letter-spacing:-1.2px;
+    }
+
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    /* ===== ABOUT ===== */
+    .about-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .about-image{
+      border-radius:24px;
+      min-height:480px;
+      background:
+        linear-gradient(180deg,rgba(8,26,47,.05),rgba(8,26,47,.44)),
+        url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85") center/cover;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .about-badge{
+      position:absolute;
+      left:22px;
+      bottom:22px;
+      right:22px;
+      background:rgba(255,255,255,.95);
+      border-radius:16px;
+      padding:18px;
+      box-shadow:0 18px 40px rgba(8,26,47,.15);
+    }
+
+    .about-badge strong{
+      display:block;
+      color:var(--navy);
+      margin-bottom:4px;
+    }
+
+    .about-badge span{
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .about-copy h3{
+      font-size:34px;
+      line-height:1.2;
+      margin:0 0 18px;
+      color:var(--navy);
+    }
+
+    .about-copy p{color:var(--muted)}
+
+    .about-points{
+      display:grid;
+      gap:13px;
+      margin-top:24px;
+    }
+
+    .about-point{
+      display:flex;
+      align-items:flex-start;
+      gap:13px;
+      padding:14px 15px;
+      border:1px solid var(--border);
+      border-radius:14px;
+      background:#fff;
+    }
+
+    .about-point i{
+      color:var(--blue);
+      margin-top:4px;
+    }
+
+    /* ===== RESEARCH ===== */
+    .research{background:var(--light)}
+
+    .research-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .research-card{
+      padding:26px;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      transition:.28s ease;
+      min-height:230px;
+    }
+
+    .research-card:hover{
+      transform:translateY(-6px);
+      box-shadow:var(--shadow);
+      border-color:transparent;
+    }
+
+    .icon-box{
+      width:48px;
+      height:48px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      color:#fff;
+      background:linear-gradient(135deg,var(--blue),var(--cyan));
+      box-shadow:0 10px 24px rgba(13,110,253,.18);
+      margin-bottom:20px;
+    }
+
+    .research-card h3{
+      margin:0 0 10px;
+      color:var(--navy);
+      font-size:18px;
+    }
+
+    .research-card p{
+      color:var(--muted);
+      font-size:14px;
+      margin:0;
+    }
+
+    /* ===== MEMBERS ===== */
+    .members-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .member-card{
+      border:1px solid var(--border);
+      border-radius:20px;
+      overflow:hidden;
+      background:#fff;
+      transition:.25s ease;
+    }
+
+    .member-card:hover{
+      box-shadow:var(--shadow);
+      transform:translateY(-5px);
+    }
+
+    .member-photo{
+      aspect-ratio:4/3;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,#eaf2ff,#edf9fb);
+      color:#8aa0b7;
+      font-size:62px;
+    }
+
+    .member-body{padding:22px}
+
+    .member-body h3{
+      margin:0;
+      color:var(--navy);
+      font-size:18px;
+    }
+
+    .member-role{
+      color:var(--blue);
+      font-size:13px;
+      font-weight:700;
+      margin:5px 0 10px;
+    }
+
+    .member-body p{
+      color:var(--muted);
+      font-size:13px;
+      margin:0;
+    }
+
+    /* ===== PUBLICATIONS ===== */
+    .publications{
+      background:linear-gradient(180deg,#f9fbfd,#f3f7fb);
+    }
+
+    .pub-list{
+      max-width:980px;
+      margin:auto;
+      display:grid;
+      gap:14px;
+    }
+
+    .pub{
+      display:grid;
+      grid-template-columns:66px 1fr auto;
+      gap:18px;
+      align-items:center;
+      background:#fff;
+      border:1px solid var(--border);
+      padding:18px 20px;
+      border-radius:16px;
+    }
+
+    .pub-year{
+      display:grid;
+      place-items:center;
+      width:54px;
+      height:54px;
+      border-radius:13px;
+      color:#fff;
+      background:var(--navy);
+      font-weight:800;
+      font-size:13px;
+    }
+
+    .pub h3{
+      margin:0 0 5px;
+      font-size:15px;
+      color:var(--navy);
+    }
+
+    .pub p{
+      margin:0;
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    .pub-link{
+      color:var(--blue);
+      font-size:18px;
+    }
+
+    /* ===== PROJECTS ===== */
+    .projects-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .project{
+      border-radius:20px;
+      padding:26px;
+      min-height:220px;
+      color:#fff;
+      background:linear-gradient(135deg,var(--navy),var(--navy-2));
+      position:relative;
+      overflow:hidden;
+    }
+
+    .project::after{
+      content:"";
+      position:absolute;
+      width:150px;
+      height:150px;
+      border-radius:50%;
+      right:-55px;
+      top:-55px;
+      background:rgba(33,182,199,.16);
+    }
+
+    .project span{
+      display:inline-block;
+      padding:6px 9px;
+      border-radius:999px;
+      background:rgba(255,255,255,.09);
+      border:1px solid rgba(255,255,255,.12);
+      color:#d8ecf4;
+      font-size:11px;
+      font-weight:700;
+    }
+
+    .project h3{
+      margin:18px 0 10px;
+      font-size:20px;
+    }
+
+    .project p{
+      margin:0;
+      color:#c0cfdd;
+      font-size:13px;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact-wrap{
+      display:grid;
+      grid-template-columns:1fr .95fr;
+      gap:32px;
+      align-items:stretch;
+    }
+
+    .contact-panel{
+      border-radius:24px;
+      padding:34px;
+      background:linear-gradient(135deg,var(--navy),#0d385e);
+      color:#fff;
+    }
+
+    .contact-panel h3{
+      font-size:30px;
+      margin:0 0 10px;
+    }
+
+    .contact-panel > p{
+      color:#c6d4e1;
+      margin:0 0 26px;
+    }
+
+    .contact-items{
+      display:grid;
+      gap:15px;
+    }
+
+    .contact-item{
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+    }
+
+    .contact-item i{
+      width:38px;
+      height:38px;
+      border-radius:11px;
+      display:grid;
+      place-items:center;
+      background:rgba(255,255,255,.09);
+      color:#7fe1eb;
+      flex:0 0 auto;
+    }
+
+    .contact-item strong{
+      display:block;
+      font-size:13px;
+      margin-bottom:3px;
+    }
+
+    .contact-item span,
+    .contact-item a{
+      color:#c7d4df;
+      font-size:13px;
+    }
+
+    .contact-note{
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:34px;
+      background:#fff;
+      box-shadow:var(--shadow);
+    }
+
+    .contact-note h3{
+      color:var(--navy);
+      margin-top:0;
+      font-size:25px;
+    }
+
+    .contact-note p{color:var(--muted)}
+
+    .contact-note .btn{margin-top:10px}
+
+    /* ===== FOOTER ===== */
+    footer{
+      padding:34px 0;
+      background:#061426;
+      color:#9fb1c3;
+      font-size:13px;
+    }
+
+    .footer-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .socials{
+      display:flex;
+      gap:10px;
+    }
+
+    .socials a{
+      width:36px;
+      height:36px;
+      display:grid;
+      place-items:center;
+      border-radius:10px;
+      background:rgba(255,255,255,.07);
+      color:#fff;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width:980px){
+      nav ul{
+        position:absolute;
+        top:76px;
+        left:0;
+        right:0;
+        display:none;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:0;
+        padding:15px 20px 22px;
+        background:#081a2f;
+        border-top:1px solid rgba(255,255,255,.08);
+      }
+
+      nav ul.show{display:flex}
+      nav li{width:100%}
+      nav a{display:block;padding:12px 0}
+      .nav-cta{display:inline-block;padding:10px 14px}
+      .menu-btn{display:block}
+
+      .hero-grid,
+      .about-grid,
+      .contact-wrap{
+        grid-template-columns:1fr;
+      }
+
+      .hero-card{max-width:700px}
+      .research-grid,
+      .members-grid,
+      .projects-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media (max-width:680px){
+      .container{width:min(var(--max),calc(100% - 26px))}
+      section{padding:72px 0}
+      .brand-text span{display:none}
+      .brand{min-width:auto}
+      .hero{padding-top:115px}
+      .hero h1{letter-spacing:-1.4px}
+      .hero p{font-size:16px}
+      .structure-art{min-height:300px}
+      .mini-stats{grid-template-columns:1fr}
+      .research-grid,
+      .members-grid,
+      .projects-grid{
+        grid-template-columns:1fr;
+      }
+      .pub{
+        grid-template-columns:54px 1fr;
+      }
+      .pub-link{display:none}
+      .footer-inner{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <h1>DUT Structural Engineering Research Group</h1>
 
-    <p>
-        Faculty of Civil Engineering<br>
-        The University of Danang – University of Science and Technology
-    </p>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">
+      <div class="brand-mark">SMS</div>
+      <div class="brand-text">
+        <strong>SMS Research Group</strong>
+        <span>Structural Mechanics & Sustainable Structures · DUT</span>
+      </div>
+    </a>
 
-    <h2>Welcome to our research group</h2>
+    <nav>
+      <button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-    <p>
-        Our research focuses on reinforced concrete structures,
-        sustainable materials, FRP strengthening, durability,
-        and artificial intelligence in structural engineering.
-    </p>
+      <ul id="navMenu">
+        <li><a href="#home" onclick="closeMenu()">Home</a></li>
+        <li><a href="#about" onclick="closeMenu()">About</a></li>
+        <li><a href="#research" onclick="closeMenu()">Research</a></li>
+        <li><a href="#members" onclick="closeMenu()">Members</a></li>
+        <li><a href="#publications" onclick="closeMenu()">Publications</a></li>
+        <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+        <li><a class="nav-cta" href="#contact" onclick="closeMenu()">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">
+          <i class="fa-solid fa-building-columns"></i>
+          Faculty of Civil Engineering · DUT
+        </div>
+
+        <h1>
+          Structural Mechanics &
+          <span>Sustainable Structures</span>
+        </h1>
+
+        <p>
+          We investigate advanced structural behavior, sustainable materials,
+          durability, strengthening technologies, and data-driven methods for
+          safer and more resilient civil infrastructure.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#research">
+            Explore our research <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a class="btn btn-secondary" href="#contact">
+            Collaborate with us
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="structure-art"></div>
+        <div class="mini-stats">
+          <div class="mini-stat">
+            <strong>90+</strong>
+            <span>ISI publications</span>
+          </div>
+          <div class="mini-stat">
+            <strong>40+</strong>
+            <span>SCIE Q1/Q2 in recent 5 years</span>
+          </div>
+          <div class="mini-stat">
+            <strong>1+</strong>
+            <span>NAFOSTED project</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="container about-grid">
+      <div class="about-image">
+        <div class="about-badge">
+          <strong>The University of Danang – University of Science and Technology</strong>
+          <span>Faculty of Civil Engineering · Da Nang, Vietnam</span>
+        </div>
+      </div>
+
+      <div class="about-copy">
+        <div class="kicker">About us</div>
+        <h3>Connecting mechanics, materials and intelligent structural engineering.</h3>
+
+        <p>
+          The Structural Mechanics & Sustainable Structures (SMS) Research Group
+          brings together researchers working across reinforced-concrete structures,
+          advanced construction materials, structural strengthening, durability,
+          computational mechanics and artificial intelligence.
+        </p>
+
+        <p>
+          Our work combines experimental investigation, analytical modelling,
+          nonlinear finite-element analysis, database development and machine learning
+          to address practical challenges in structural engineering.
+        </p>
+
+        <div class="about-points">
+          <div class="about-point">
+            <i class="fa-solid fa-check"></i>
+            <div><strong>Research-driven</strong><br><span>From fundamental mechanics to practical engineering applications.</span></div>
+          </div>
+          <div class="about-point">
+            <i class="fa-solid fa-check"></i>
+            <div><strong>Interdisciplinary</strong><br><span>Structural engineering, sustainable materials, durability and AI/ML.</span></div>
+          </div>
+          <div class="about-point">
+            <i class="fa-solid fa-check"></i>
+            <div><strong>Open to collaboration</strong><br><span>We welcome academic, industry and student collaboration.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESEARCH ===== -->
+  <section class="research" id="research">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Research areas</div>
+        <h2>Research for resilient and sustainable infrastructure</h2>
+        <p>
+          Our activities span structural mechanics, materials, durability,
+          strengthening, earthquake engineering and data-driven modelling.
+        </p>
+      </div>
+
+      <div class="research-grid">
+
+        <article class="research-card">
+          <div class="icon-box"><i class="fa-solid fa-leaf"></i></div>
+          <h3>Green & low-carbon materials</h3>
+          <p>Development and application of environmentally responsible materials for structural engineering.</p>
+        </article>
+
+        <article class="research-card">
+          <div class="icon-box"><i class="fa-solid fa-flask"></i></div>
+          <h3>High-performance & smart materials</h3>
+          <p>Advanced cementitious and composite materials with enhanced structural performance and functionality.</p>
+        </article>
+
+        <article class="research-card">
+          <div class="icon-box"><i class="fa-solid fa-water"></i></div>
+          <h3>Durability of RC structures</h3>
+          <p>Corrosion, degradation and service-life assessment of reinforced-concrete structures in aggressive environments.</p>
+        </article>
+
+        <article class="research-card">
+          <div class="icon-box"><i class="fa-solid fa-layer-group"></i></div>
+          <h3>Strengthening & composite systems</h3>
+          <p>FRP, FRCM/TRM and sustainable strengthening solutions for concrete and masonry structures.</p>
+        </article>
+
+        <article class="research-card">
+          <div class="icon-box"><i class="fa-solid fa-wave-square"></i></div>
+          <h3>Shells, plates & tensegrity</h3>
+          <p>Mechanics, modelling and innovative design of plates, shells and lightweight structural systems.</p>
+        </article>
+
+        <article class="research-card">
+          <div class="icon-box"><i class="fa-solid fa-house-crack"></i></div>
+          <h3>Earthquake engineering</h3>
+          <p>Nonlinear response, performance-based assessment and seismic resilience of structural systems.</p>
+        </article>
+
+        <article class="research-card">
+          <div class="icon-box"><i class="fa-solid fa-brain"></i></div>
+          <h3>AI & machine learning</h3>
+          <p>Data-driven prediction, explainable AI and hybrid mechanics–ML approaches for structures and materials.</p>
+        </article>
+
+        <article class="research-card">
+          <div class="icon-box"><i class="fa-solid fa-cubes-stacked"></i></div>
+          <h3>RC structural behavior</h3>
+          <p>Shear, punching shear, flexure, bond and nonlinear behavior of reinforced-concrete members and connections.</p>
+        </article>
+
+        <article class="research-card">
+          <div class="icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+          <h3>Computational mechanics</h3>
+          <p>Analytical modelling, nonlinear finite-element analysis and computational tools for structural assessment.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MEMBERS ===== -->
+  <section id="members">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Our team</div>
+        <h2>Researchers and collaborators</h2>
+        <p>
+          Replace the sample cards below with the names, photographs,
+          positions and research interests of your group members.
+        </p>
+      </div>
+
+      <div class="members-grid">
+
+        <!-- MEMBER 1: Replace with real information -->
+        <article class="member-card">
+          <div class="member-photo"><i class="fa-solid fa-user"></i></div>
+          <div class="member-body">
+            <h3>Group Leader</h3>
+            <div class="member-role">Professor / Associate Professor</div>
+            <p>Structural concrete · Structural mechanics · Sustainable materials</p>
+          </div>
+        </article>
+
+        <!-- MEMBER 2 -->
+        <article class="member-card">
+          <div class="member-photo"><i class="fa-solid fa-user"></i></div>
+          <div class="member-body">
+            <h3>Research Member</h3>
+            <div class="member-role">Lecturer / Researcher</div>
+            <p>Reinforced concrete · FRP structures · Shear and punching shear</p>
+          </div>
+        </article>
+
+        <!-- MEMBER 3 -->
+        <article class="member-card">
+          <div class="member-photo"><i class="fa-solid fa-user"></i></div>
+          <div class="member-body">
+            <h3>Research Member</h3>
+            <div class="member-role">Lecturer / Researcher</div>
+            <p>Durability · Corrosion · Structural strengthening</p>
+          </div>
+        </article>
+
+        <!-- Add more member cards by copying one block above -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PUBLICATIONS ===== -->
+  <section class="publications" id="publications">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Selected publications</div>
+        <h2>Recent research outputs</h2>
+        <p>
+          Add your group's most representative and recent journal papers here.
+        </p>
+      </div>
+
+      <div class="pub-list">
+
+        <!-- PUBLICATION 1 -->
+        <article class="pub">
+          <div class="pub-year">2026</div>
+          <div>
+            <h3>Unified shear strength prediction model for slender concrete beams reinforced with steel or FRP with and without transverse reinforcement</h3>
+            <p>Selected publication · Structural concrete / reinforced-concrete mechanics</p>
+          </div>
+          <a class="pub-link" href="#" aria-label="Publication link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+
+        <!-- PUBLICATION 2 -->
+        <article class="pub">
+          <div class="pub-year">2026</div>
+          <div>
+            <h3>Evaluation of current design provisions for predicting punching shear strength of reinforced concrete slab–column joints with and without reinforcement corrosion</h3>
+            <p>Selected publication · Punching shear · Corrosion</p>
+          </div>
+          <a class="pub-link" href="#" aria-label="Publication link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+
+        <!-- PUBLICATION 3 -->
+        <article class="pub">
+          <div class="pub-year">2026</div>
+          <div>
+            <h3>Analytical and data-driven studies on reinforced concrete, FRP and sustainable structural systems</h3>
+            <p>Replace this sample item with another representative paper.</p>
+          </div>
+          <a class="pub-link" href="#" aria-label="Publication link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Projects</div>
+        <h2>Research projects & collaboration</h2>
+        <p>
+          Highlight funded projects, current research programmes and international collaboration.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project">
+          <span>NAFOSTED</span>
+          <h3>Funded research project</h3>
+          <p>Add the title, project code, duration and principal investigator here.</p>
+        </article>
+
+        <article class="project">
+          <span>STRUCTURAL DURABILITY</span>
+          <h3>Corrosion & service life</h3>
+          <p>Research on degradation mechanisms and resistance of reinforced-concrete structures.</p>
+        </article>
+
+        <article class="project">
+          <span>SUSTAINABLE STRUCTURES</span>
+          <h3>Advanced strengthening systems</h3>
+          <p>FRP/FRCM/TRM and sustainable composite solutions for existing structures.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Contact</div>
+        <h2>Research collaboration starts with a conversation</h2>
+        <p>
+          We welcome collaboration with researchers, students and industry partners.
+        </p>
+      </div>
+
+      <div class="contact-wrap">
+        <div class="contact-panel">
+          <h3>Get in touch</h3>
+          <p>Structural Mechanics & Sustainable Structures Research Group</p>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <i class="fa-solid fa-building-columns"></i>
+              <div>
+                <strong>Institution</strong>
+                <span>The University of Danang – University of Science and Technology</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <div>
+                <strong>Faculty</strong>
+                <span>Faculty of Civil Engineering</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Location</strong>
+                <span>Da Nang, Vietnam</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:nvchinh@dut.udn.vn">nvchinh@dut.udn.vn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-note">
+          <h3>Interested in joining or collaborating?</h3>
+          <p>
+            We are interested in joint publications, research projects,
+            graduate student collaboration, experimental programmes and
+            international academic partnerships.
+          </p>
+
+          <p>
+            You can also add links here to Google Scholar, ResearchGate,
+            ORCID, the Faculty website, or a laboratory page.
+          </p>
+
+          <a class="btn btn-primary" href="mailto:nvchinh@dut.udn.vn">
+            <i class="fa-solid fa-envelope"></i> Send an email
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>
+      © <span id="year"></span> SMS Research Group · Faculty of Civil Engineering · DUT
+    </div>
+
+    <div class="socials">
+      <!-- Replace # with your real links -->
+      <a href="#" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+      <a href="#" title="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
+      <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu(){
+    document.getElementById("navMenu").classList.toggle("show");
+  }
+
+  function closeMenu(){
+    document.getElementById("navMenu").classList.remove("show");
+  }
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
