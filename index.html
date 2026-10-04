@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nhóm nghiên cứu Vật liệu và Kết cấu bền vững (SMS)</title>
   <meta name="description" content="Website của Nhóm nghiên cứu Vật liệu và Kết cấu bền vững (SMS), Khoa Xây dựng, Trường Đại học Bách khoa - Đại học Đà Nẵng." />
-  <script type="text/javascript" nonce="4870a801cac546e5959eb799229" src="//local.adguard.org?ts=1791105277049&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_0000000074008211b4a9a80cbef60a54%26fn%3Dindex.html%26cd%3Dattachment%26ts%3D497529%26p%3Dfs%26cid%3D1%26sig%3Dc1107db1cdc1b0f174749c8dad33cc077276a6fce13d26caac02e7860eb99f9d%26v%3D0&amp;app=chrome.exe&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=0&amp;stealth=1&amp;st-dnt"></script><script type="text/javascript" nonce="4870a801cac546e5959eb799229" src="//local.adguard.org?ts=1791105277049&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script><link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -264,6 +264,25 @@
     .floating-badge span{
       color:var(--muted);
       font-size:13px;
+    }
+    .lab-gallery{margin-top:34px;padding:22px;border:1px solid #cfe0f4;border-radius:22px;background:rgba(255,255,255,.84);box-shadow:0 16px 38px rgba(12,77,162,.07)}
+    .lab-gallery-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:15px}
+    .lab-gallery-head h2{margin:0;color:var(--blue-dark);font-size:21px;line-height:1.3}
+    .lab-gallery-head span{color:var(--muted);font-size:13px}
+    .lab-gallery-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+    .lab-tile{display:block;min-width:0;overflow:hidden;border:1px solid var(--border);border-radius:13px;background:#fff;transition:transform .2s ease,box-shadow .2s ease}
+    .lab-tile:hover,.lab-tile:focus-visible{transform:translateY(-3px);box-shadow:0 12px 22px rgba(12,77,162,.14);outline-offset:3px}
+    .lab-tile img{width:100%;aspect-ratio:4/3;object-fit:cover}
+    .lab-tile:nth-child(1) img{object-position:center 35%}
+    .lab-tile:nth-child(4) img{object-position:center 47%}
+    .lab-tile span{display:block;min-height:53px;padding:9px 10px;color:var(--blue-dark);font-size:13px;font-weight:600;line-height:1.35}
+    @media(max-width:940px){.lab-gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media(max-width:600px){
+      .lab-gallery{padding:16px;margin-top:26px}
+      .lab-gallery-head{display:block}
+      .lab-gallery-head h2{font-size:19px}
+      .lab-gallery-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+      .lab-tile{flex:0 0 72%;scroll-snap-align:start}
     }
 
     .about-grid{
@@ -728,10 +747,19 @@
 
       <div class="hero-visual">
         <img class="poster" src="images/poster-sms.png" alt="Poster giới thiệu nhóm nghiên cứu SMS">
-        <div class="floating-badge">
-          <strong>Thông tin tổng quan nhóm</strong>
-          <span>Website này được xây dựng dựa trên bộ nhận diện và thông tin chính thức của nhóm SMS.</span>
-        </div>
+      </div>
+    </div>
+    <div class="container lab-gallery" aria-labelledby="lab-gallery-title">
+      <div class="lab-gallery-head">
+        <h2 id="lab-gallery-title">Hình ảnh phòng thí nghiệm</h2>
+        <span>Nhấn vào ảnh để xem kích thước đầy đủ</span>
+      </div>
+      <div class="lab-gallery-grid">
+        <a class="lab-tile" href="images/lab-thi-nghiem-dam.jpg" target="_blank" rel="noopener noreferrer"><img src="images/lab-thi-nghiem-dam.jpg" alt="Dầm bê tông trong thiết bị thí nghiệm tải trọng" loading="lazy"><span>Thí nghiệm dầm bê tông</span></a>
+        <a class="lab-tile" href="images/lab-chuan-bi-mau-dam.jpg" target="_blank" rel="noopener noreferrer"><img src="images/lab-chuan-bi-mau-dam.jpg" alt="Các mẫu dầm và cốt thép đang được chuẩn bị trong phòng thí nghiệm" loading="lazy"><span>Chuẩn bị mẫu dầm</span></a>
+        <a class="lab-tile" href="images/lab-theo-doi-mau.jpg" target="_blank" rel="noopener noreferrer"><img src="images/lab-theo-doi-mau.jpg" alt="Các mẫu thí nghiệm được kết nối thiết bị theo dõi" loading="lazy"><span>Bố trí thiết bị theo dõi</span></a>
+        <a class="lab-tile" href="images/lab-thi-nghiem-cot.jpg" target="_blank" rel="noopener noreferrer"><img src="images/lab-thi-nghiem-cot.jpg" alt="Mẫu cột bê tông trong máy thí nghiệm nén" loading="lazy"><span>Thí nghiệm nén cột</span></a>
+        <a class="lab-tile" href="images/lab-mau-cot.jpg" target="_blank" rel="noopener noreferrer"><img src="images/lab-mau-cot.jpg" alt="Các mẫu cột bê tông sau quá trình thí nghiệm" loading="lazy"><span>Mẫu cột thí nghiệm</span></a>
       </div>
     </div>
   </section>
