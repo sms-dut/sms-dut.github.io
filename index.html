@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nhóm nghiên cứu Vật liệu và Kết cấu bền vững (SMS)</title>
-  <meta name="description" content="Website của Nhóm nghiên cứu Vật liệu và Kết cấu bền vững (SMS), Khoa Xây dựng, Trường Đại học Bách khoa - Đại học Đà Nẵng." />
-  <script type="text/javascript" nonce="bc5a91ddd9a5457495ccb4e4745" src="//local.adguard.org?ts=1791159920230&amp;type=content-script&amp;dmn=chatgpt.com&amp;url=https%3A%2F%2Fchatgpt.com%2Fbackend-api%2Festuary%2Fcontent%3Fid%3Dfile_00000000f9f08207aae8d72610a298a1%26fn%3Dindex.html%26cd%3Dattachment%26ts%3D497544%26p%3Dfs%26cid%3D1%26sig%3Dd204cfac42f84ce326ed32cb74ef1519845e416c01fa042a05c5cc208760b94f%26v%3D0&amp;app=chrome.exe&amp;css=2&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=0&amp;stealth=1&amp;st-dnt"></script><script type="text/javascript" nonce="bc5a91ddd9a5457495ccb4e4745" src="//local.adguard.org?ts=1791159920230&amp;name=AdGuard%20Extra&amp;name=AdGuard%20Popup%20Blocker&amp;type=user-script"></script><link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta name="description" content="Website của Nhóm nghiên cứu Vật liệu và Kết cấu bền vững (SMS), Khoa Xây dựng, Trường Đại học Bách khoa - Đại học Đà Nẵng.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <style>
     :root{
       --blue:#0c4da2;
@@ -682,8 +682,36 @@
       .pub-items{padding:0 16px 7px}
       .pub-items li{grid-template-columns:1fr;gap:2px;padding:15px 0}
     }
-  </style>
-</head>
+  
+    /* Permanent links to the Vietnamese and English editions */
+    .nav-tools{display:flex;align-items:center;gap:18px;flex:0 0 auto}
+    .language-switch{display:inline-flex;align-items:center;gap:3px;padding:3px;border:1px solid #cbdcf2;border-radius:999px;background:#f2f7ff;flex-shrink:0}
+    .language-switch a{display:inline-flex;align-items:center;justify-content:center;min-width:34px;min-height:34px;padding:4px 8px;border-radius:999px;font-size:13px;font-weight:800;color:var(--blue-dark);line-height:1}
+    .language-switch a[aria-current="page"]{background:var(--blue);color:#fff;box-shadow:0 3px 8px rgba(12,77,162,.18)}
+    .language-switch a:hover,.language-switch a:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+    header .container.nav{width:min(1440px,calc(100% - 34px))}
+    .nav{gap:18px}
+    .brand-text strong{font-size:15px}
+    .brand{flex:1 1 auto}
+    @media(max-width:1240px){
+      .nav-tools{gap:12px}
+      nav ul{position:absolute;top:100%;left:0;right:0;background:#fff;border-top:1px solid var(--border);padding:16px 20px 20px;display:none;flex-direction:column;align-items:flex-start;gap:0;box-shadow:0 18px 30px rgba(12,77,162,.08)}
+      nav ul.show{display:flex}
+      nav li{width:100%}
+      nav li a{display:block;padding:10px 0}
+      .menu-btn{display:block}
+    }
+    @media(max-width:600px){
+      .nav{gap:10px;min-height:78px;padding:10px 0}
+      .brand{gap:9px}
+      .brand-logo{width:42px;height:42px;border-radius:10px}
+      .brand-text strong{font-size:12px;line-height:1.4}
+      .nav-tools{gap:8px}
+      .language-switch a{min-width:28px;min-height:30px;padding:4px 6px;font-size:12px}
+      .menu-btn{padding:4px;font-size:24px}
+    }
+</style>
+<link rel="alternate" hreflang="vi" href="index.html"><link rel="alternate" hreflang="en" href="en.html"><link rel="alternate" hreflang="x-default" href="index.html"><meta property="og:title" content="Nhóm nghiên cứu Vật liệu và Kết cấu bền vững (SMS)"><meta property="og:description" content="Website của Nhóm nghiên cứu Vật liệu và Kết cấu bền vững (SMS), Khoa Xây dựng, Trường Đại học Bách khoa - Đại học Đà Nẵng."><meta property="og:locale" content="vi_VN"><meta property="og:type" content="website"></head>
 <body>
 
 <header>
@@ -696,7 +724,7 @@
       </div>
     </a>
 
-    <nav>
+    <div class="nav-tools"><nav>
       <button class="menu-btn" onclick="toggleMenu()" aria-label="Mở menu">☰</button>
       <ul id="navMenu">
         <li><a href="#gioi-thieu" onclick="closeMenu()">Giới thiệu</a></li>
@@ -707,7 +735,7 @@
         <li><a class="btn-nav" href="#lien-he" onclick="closeMenu()">Liên hệ</a></li>
       </ul>
     </nav>
-  </div>
+  <div class="language-switch" role="group" aria-label="Ngôn ngữ"><a href="index.html" lang="vi" hreflang="vi" data-language-link="" aria-label="Tiếng Việt" title="Tiếng Việt" aria-current="page">VI</a><a href="en.html" lang="en" hreflang="en" data-language-link="" aria-label="English" title="English">EN</a></div></div></div>
 </header>
 
 <main id="top">
@@ -815,7 +843,7 @@
             <div class="info-item">
               <div class="info-icon">🎓</div>
               <div>
-                <strong>Đào tạo & nghiên cứu</strong>
+                <strong>Đào tạo &amp; nghiên cứu</strong>
                 <span>Gắn kết giữa nghiên cứu chất lượng cao, đào tạo đại học - sau đại học và ứng dụng thực tiễn.</span>
               </div>
             </div>
@@ -1174,6 +1202,16 @@
     const section = document.querySelector(location.hash);
     if (section && section.matches('.publication-group')) section.open = true;
   }
+
+  // Preserve the current section when switching between the static editions.
+  function syncLanguageLinks(){
+    document.querySelectorAll('[data-language-link]').forEach(link => {
+      const page = link.getAttribute('hreflang') === 'en' ? 'en.html' : 'index.html';
+      link.setAttribute('href', page + window.location.hash);
+    });
+  }
+  syncLanguageLinks();
+  window.addEventListener('hashchange', syncLanguageLinks);
 </script>
 
 </body>
