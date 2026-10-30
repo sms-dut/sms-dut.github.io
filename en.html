@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainable Materials and Structures (SMS) Research Group</title>
+  <meta name="description" content="Explore the Sustainable Materials and Structures (SMS) Research Group at The University of Danang – University of Science and Technology, Vietnam: researchers, publications, laboratory research and collaboration.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --blue:#0c4da2;
+      --blue-dark:#082f67;
+      --blue-soft:#edf4ff;
+      --gold:#f4c21c;
+      --green:#1f9b4e;
+      --cyan:#1d89d1;
+      --text:#1f2d3d;
+      --muted:#60738a;
+      --border:#dce6f3;
+      --bg:#f6f9fe;
+      --white:#ffffff;
+      --shadow:0 18px 40px rgba(12,77,162,0.12);
+      --radius:20px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Be Vietnam Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.65;
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(var(--max), calc(100% - 34px)); margin:0 auto}
+    .section{padding:88px 0}
+    .section-head{max-width:760px; margin:0 auto 40px; text-align:center}
+    .eyebrow{
+      display:inline-block;
+      padding:7px 12px;
+      border-radius:999px;
+      background:#e9f2ff;
+      color:var(--blue);
+      font-size:13px;
+      font-weight:700;
+      margin-bottom:12px;
+    }
+    .section-head h2{
+      margin:0 0 12px;
+      color:var(--blue-dark);
+      font-size:clamp(30px, 4vw, 46px);
+      line-height:1.15;
+    }
+    .section-head p{margin:0; color:var(--muted); font-size:16px}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,.94);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(12,77,162,.10);
+    }
+    .nav{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+    }
+    .brand-logo{
+      width:54px;
+      height:54px;
+      border-radius:14px;
+      object-fit:cover;
+      border:2px solid rgba(12,77,162,.08);
+      background:#fff;
+      flex:0 0 auto;
+    }
+    .brand-text strong{
+      display:block;
+      color:var(--blue-dark);
+      font-size:16px;
+      line-height:1.25;
+    }
+    .brand-text span{
+      display:block;
+      color:var(--muted);
+      font-size:12px;
+      margin-top:2px;
+    }
+    nav ul{
+      list-style:none;
+      display:flex;
+      align-items:center;
+      gap:24px;
+      margin:0;
+      padding:0;
+    }
+    nav a{
+      color:var(--blue-dark);
+      font-weight:600;
+      font-size:14px;
+      transition:.2s ease;
+    }
+    nav a:hover{color:var(--cyan)}
+    .btn-nav{
+      padding:11px 16px;
+      border-radius:999px;
+      background:linear-gradient(135deg, var(--blue), var(--cyan));
+      color:#fff;
+      box-shadow:0 10px 24px rgba(12,77,162,.18);
+    }
+    .menu-btn{
+      display:none;
+      border:none;
+      background:transparent;
+      font-size:26px;
+      color:var(--blue-dark);
+      cursor:pointer;
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 75% 20%, rgba(29,137,209,.18), transparent 28%),
+        radial-gradient(circle at 20% 15%, rgba(244,194,28,.22), transparent 18%),
+        linear-gradient(135deg, #f4f9ff 0%, #eaf2ff 38%, #ffffff 100%);
+      padding:58px 0 46px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:34px;
+      align-items:center;
+    }
+    .hero-card{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      background:#fff;
+      border:1px solid var(--border);
+      color:var(--blue);
+      padding:8px 14px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:700;
+      margin-bottom:18px;
+      box-shadow:0 10px 20px rgba(12,77,162,.06);
+    }
+    .hero h1{
+      margin:0 0 16px;
+      font-size:clamp(34px, 4.2vw, 52px);
+      line-height:1.12;
+      color:var(--blue-dark);
+      letter-spacing:-1.2px;
+    }
+    .hero h1 .green{color:var(--green)}
+    .hero .subtitle{
+      margin:0 0 18px;
+      display:inline-block;
+      padding:8px 16px;
+      border-radius:999px;
+      background:#fff0c8;
+      color:var(--blue);
+      font-size:clamp(17px, 2.2vw, 22px);
+      font-weight:700;
+    }
+    .hero p{
+      color:#4e6278;
+      font-size:17px;
+      margin:0 0 25px;
+      max-width:760px;
+    }
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-bottom:26px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:13px 18px;
+      border-radius:14px;
+      font-weight:700;
+      transition:.2s ease;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg, var(--blue), var(--cyan));
+      color:#fff;
+      box-shadow:0 14px 28px rgba(12,77,162,.18);
+    }
+    .btn-secondary{
+      background:#fff;
+      color:var(--blue-dark);
+      border:1px solid var(--border);
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .hero-points{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:14px;
+    }
+    .hero-point{
+      background:#fff;
+      border:1px solid var(--border);
+      padding:16px 14px;
+      border-radius:18px;
+      box-shadow:0 14px 28px rgba(12,77,162,.06);
+    }
+    .hero-point strong{
+      display:block;
+      color:var(--blue-dark);
+      font-size:15px;
+      line-height:1.35;
+      margin-bottom:4px;
+    }
+    .hero-point span{
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.55;
+    }
+    .hero-visual{
+      position:relative;
+    }
+    .hero-visual .poster{
+      width:100%;
+      border-radius:26px;
+      border:1px solid rgba(12,77,162,.12);
+      box-shadow:var(--shadow);
+      background:#fff;
+    }
+    .floating-badge{
+      position:absolute;
+      right:-10px;
+      bottom:26px;
+      background:#fff;
+      border:1px solid var(--border);
+      border-left:5px solid var(--gold);
+      border-radius:16px;
+      padding:16px 18px;
+      box-shadow:0 16px 28px rgba(12,77,162,.12);
+      max-width:290px;
+    }
+    .floating-badge strong{
+      display:block;
+      color:var(--blue-dark);
+      margin-bottom:4px;
+    }
+    .floating-badge span{
+      color:var(--muted);
+      font-size:13px;
+    }
+    .lab-gallery{margin-top:34px;padding:22px;border:1px solid #cfe0f4;border-radius:22px;background:rgba(255,255,255,.84);box-shadow:0 16px 38px rgba(12,77,162,.07)}
+    .lab-gallery-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:15px}
+    .lab-gallery-head h2{margin:0;color:var(--blue-dark);font-size:21px;line-height:1.3}
+    .lab-gallery-head span{color:var(--muted);font-size:13px}
+    .lab-gallery-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+    .lab-tile{display:block;min-width:0;overflow:hidden;border:1px solid var(--border);border-radius:13px;background:#fff;transition:transform .2s ease,box-shadow .2s ease}
+    .lab-tile:hover,.lab-tile:focus-visible{transform:translateY(-3px);box-shadow:0 12px 22px rgba(12,77,162,.14);outline-offset:3px}
+    .lab-tile img{width:100%;aspect-ratio:4/3;object-fit:cover}
+    .lab-tile:nth-child(1) img{object-position:center 35%}
+    .lab-tile:nth-child(4) img{object-position:center 47%}
+    @media(max-width:940px){.lab-gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media(max-width:600px){
+      .lab-gallery{padding:16px;margin-top:26px}
+      .lab-gallery-head{display:block}
+      .lab-gallery-head h2{font-size:19px}
+      .lab-gallery-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+      .lab-tile{flex:0 0 72%;scroll-snap-align:start}
+    }
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:28px;
+      align-items:stretch;
+    }
+    .about-card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+    .about-card h3{
+      margin:0 0 12px;
+      font-size:28px;
+      line-height:1.25;
+      color:var(--blue-dark);
+    }
+    .about-card p{margin:0 0 14px; color:var(--muted)}
+    .info-list{
+      display:grid;
+      gap:12px;
+      margin-top:18px;
+    }
+    .info-item{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      padding:14px 15px;
+      border-radius:16px;
+      background:var(--blue-soft);
+      border:1px solid #d7e6ff;
+    }
+    .info-icon{
+      width:38px;
+      height:38px;
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg, var(--blue), var(--cyan));
+      color:#fff;
+      font-size:18px;
+      flex:0 0 auto;
+    }
+    .info-item strong{display:block; color:var(--blue-dark); margin-bottom:2px}
+    .info-item span{color:var(--muted); font-size:14px}
+
+    .members-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:20px;
+    }
+    .member-card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow:0 14px 32px rgba(12,77,162,.08);
+      transition:.25s ease;
+    }
+    .member-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 20px 40px rgba(12,77,162,.14);
+    }
+    .member-photo{
+      aspect-ratio:4/4.2;
+      overflow:hidden;
+      background:#f2f7ff;
+    }
+    .member-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .member-body{padding:18px 16px 20px}
+    .member-body h3{
+      margin:0 0 6px;
+      color:var(--blue-dark);
+      font-size:18px;
+      line-height:1.35;
+    }
+    .member-role{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      background:#eaf2ff;
+      color:var(--blue);
+      font-size:12px;
+      font-weight:700;
+      margin-bottom:10px;
+    }
+    .member-body p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      min-height:62px;
+    }
+
+    .research{
+      background:linear-gradient(180deg, #fafdff 0%, #eef5ff 100%);
+    }
+    .research-grid{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:18px;
+    }
+    .research-card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:20px 20px;
+      box-shadow:0 12px 28px rgba(12,77,162,.06);
+      display:flex;
+      gap:16px;
+      align-items:flex-start;
+    }
+    .research-icon{
+      width:58px;
+      height:58px;
+      border-radius:16px;
+      background:linear-gradient(135deg, var(--blue), var(--green));
+      color:#fff;
+      display:grid;
+      place-items:center;
+      font-size:24px;
+      flex:0 0 auto;
+    }
+    .research-card h3{
+      margin:0 0 6px;
+      color:var(--blue-dark);
+      font-size:19px;
+      line-height:1.35;
+    }
+    .research-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .stats-grid{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:18px;
+    }
+    .stat-card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:22px 20px;
+      box-shadow:0 12px 26px rgba(12,77,162,.07);
+    }
+    .stat-number{
+      color:var(--green);
+      font-size:42px;
+      line-height:1;
+      font-weight:800;
+      margin-bottom:10px;
+    }
+    .stat-card h3{
+      margin:0 0 6px;
+      color:var(--blue-dark);
+      font-size:18px;
+      line-height:1.35;
+    }
+    .stat-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .split-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+    }
+    .box{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+    .box h3{
+      margin:0 0 16px;
+      font-size:28px;
+      color:var(--blue-dark);
+    }
+    .check-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:14px;
+    }
+    .check-list li{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      color:var(--text);
+    }
+    .tick{
+      width:28px;
+      height:28px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:#e8f8ef;
+      color:var(--green);
+      font-weight:800;
+      flex:0 0 auto;
+      margin-top:2px;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    .contact-panel{
+      background:linear-gradient(135deg, var(--blue-dark), var(--blue));
+      color:#fff;
+      border-radius:28px;
+      padding:30px;
+      box-shadow:0 18px 40px rgba(12,77,162,.18);
+    }
+    .contact-panel h3{
+      margin:0 0 10px;
+      font-size:30px;
+      line-height:1.2;
+    }
+    .contact-panel > p{
+      margin:0 0 22px;
+      color:#dce7ff;
+    }
+    .contact-items{
+      display:grid;
+      gap:14px;
+    }
+    .contact-item{
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+      padding:14px 15px;
+      border-radius:18px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .contact-item .info-icon{
+      background:rgba(255,255,255,.15);
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .contact-item strong{display:block; margin-bottom:2px}
+    .contact-item a,.contact-item span{font-size:14px; color:#eef5ff}
+    .contact-side{
+      display:grid;
+      gap:22px;
+    }
+    .mini-box{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:var(--shadow);
+    }
+    .mini-box h4{
+      margin:0 0 12px;
+      color:var(--blue-dark);
+      font-size:22px;
+    }
+    .mini-box p{
+      margin:0 0 14px;
+      color:var(--muted);
+    }
+    .link-list{
+      display:grid;
+      gap:10px;
+    }
+    .link-item{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:12px 14px;
+      border-radius:14px;
+      background:#f4f8ff;
+      color:var(--blue-dark);
+      border:1px solid #dce6f3;
+      font-weight:600;
+      font-size:14px;
+    }
+    .arrow{font-weight:800}
+
+    footer{
+      background:#071f45;
+      color:#d3def0;
+      padding:26px 0;
+      margin-top:34px;
+    }
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      align-items:center;
+      font-size:14px;
+    }
+
+    @media (max-width: 1100px){
+      .members-grid{grid-template-columns:repeat(2, minmax(0, 1fr))}
+      .stats-grid{grid-template-columns:repeat(2, 1fr)}
+    }
+    @media (max-width: 940px){
+      .hero-grid,
+      .about-grid,
+      .split-grid,
+      .contact-grid{grid-template-columns:1fr}
+      .hero-points{grid-template-columns:1fr}
+      .floating-badge{position:static; margin-top:16px; max-width:none}
+      nav ul{
+        position:absolute;
+        top:78px;
+        left:0;
+        right:0;
+        background:#fff;
+        border-top:1px solid rgba(12,77,162,.12);
+        padding:16px 20px 20px;
+        display:none;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:0;
+        box-shadow:0 18px 30px rgba(12,77,162,.08);
+      }
+      nav ul.show{display:flex}
+      nav li{width:100%}
+      nav li a{display:block; padding:10px 0}
+      .menu-btn{display:block}
+    }
+    @media (max-width: 760px){
+      .section{padding:72px 0}
+      .members-grid,
+      .research-grid,
+      .stats-grid{grid-template-columns:1fr}
+      .brand-text span{display:none}
+      .hero{padding-top:34px}
+    }
+
+    /* Danh sách công bố ISI theo thành viên */
+    .member-card{display:flex;flex-direction:column}
+    .member-body{display:flex;flex:1;flex-direction:column}
+    .member-body p{min-height:0;flex:1}
+    .member-profile{flex:1;margin-top:2px}
+    .member-detail{padding:12px 0;border-top:1px solid var(--border)}
+    .member-detail:first-child{border-top:0;padding-top:3px}
+    .member-detail h4{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.035em;text-transform:uppercase;margin:0 0 3px}
+    .member-detail p{margin:0;color:var(--text);font-size:14px;line-height:1.55;min-height:0;flex:none}
+    .member-pub-link{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;
+      margin-top:18px;padding:9px 13px;border:1px solid #cbdcf2;border-radius:10px;
+      color:var(--blue-dark);background:#f2f7ff;font-size:14px;font-weight:700;line-height:1.4}
+    .member-pub-link:hover,.member-pub-link:focus-visible{background:#e2efff;outline-offset:3px}
+    .member-actions{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-top:18px}
+    .member-actions .member-pub-link{margin-top:0}
+    .member-scholar-link{display:inline-flex;align-items:center;gap:7px;padding:9px 13px;
+      border:1px solid var(--blue);border-radius:10px;color:#fff;background:var(--blue);
+      font-size:14px;font-weight:700;line-height:1.4}
+    .member-scholar-link:hover,.member-scholar-link:focus-visible{background:var(--blue-dark);outline-offset:3px}
+    .member-contact{display:grid;gap:5px;margin-top:16px;padding-top:13px;border-top:1px solid var(--border)}
+    .member-contact a{display:flex;align-items:baseline;gap:8px;color:var(--blue-dark);font-size:13px;line-height:1.45;overflow-wrap:anywhere}
+    .member-contact a:hover,.member-contact a:focus-visible{text-decoration:underline;text-underline-offset:3px}
+    .member-contact .contact-symbol{width:18px;flex:0 0 18px;color:var(--blue);font-style:normal;text-align:center}
+    .publication-area{margin-top:46px;padding-top:36px;border-top:1px solid var(--border)}
+    .publication-heading{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:20px}
+    .publication-heading h3{margin:0;color:var(--blue-dark);font-size:clamp(23px,3vw,31px);line-height:1.25}
+    .publication-heading p{margin:6px 0 0;color:var(--muted);font-size:14px}
+    .publication-list{display:grid;gap:12px}
+    .publication-group{background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 8px 22px rgba(12,77,162,.05);scroll-margin-top:100px}
+    .publication-group[open]{border-color:#aac7ed;box-shadow:0 13px 28px rgba(12,77,162,.09)}
+    .publication-group summary{display:flex;align-items:center;gap:16px;padding:18px 22px;cursor:pointer;list-style:none;color:var(--blue-dark)}
+    .publication-group summary::-webkit-details-marker{display:none}
+    .publication-group summary:focus-visible{outline:3px solid var(--cyan);outline-offset:-4px}
+    .pub-name{font-size:17px;font-weight:700;flex:1}
+    .pub-count{font-size:14px;font-weight:600;color:var(--blue);background:var(--blue-soft);padding:6px 11px;border-radius:999px;white-space:nowrap}
+    .pub-chevron{font-size:20px;line-height:1;transition:transform .2s}
+    .publication-group[open] .pub-chevron{transform:rotate(180deg)}
+    .pub-items{list-style:none;margin:0;padding:4px 22px 12px;border-top:1px solid var(--border)}
+    .pub-items li{display:grid;grid-template-columns:60px minmax(0,1fr);gap:14px;padding:17px 0;border-bottom:1px solid #e9eff7}
+    .pub-items li:last-child{border-bottom:0}
+    .pub-year{font-weight:700;color:var(--blue);font-size:14px;padding-top:2px}
+    .pub-title{display:block;color:var(--text);font-size:15px;line-height:1.55;font-weight:600;overflow-wrap:anywhere}
+    .pub-journal{display:block;color:var(--muted);font-size:14px;margin-top:4px;line-height:1.5;overflow-wrap:anywhere}
+    @media(max-width:600px){
+      .publication-heading{display:block}
+      .publication-group summary{padding:16px;gap:10px;flex-wrap:wrap}
+      .pub-name{flex-basis:100%;font-size:16px}
+      .pub-count{margin-right:auto}
+      .pub-items{padding:0 16px 7px}
+      .pub-items li{grid-template-columns:1fr;gap:2px;padding:15px 0}
+    }
+  
+    /* Permanent links to the Vietnamese and English editions */
+    .nav-tools{display:flex;align-items:center;gap:18px;flex:0 0 auto}
+    .language-switch{display:inline-flex;align-items:center;gap:3px;padding:3px;border:1px solid #cbdcf2;border-radius:999px;background:#f2f7ff;flex-shrink:0}
+    .language-switch a{display:inline-flex;align-items:center;justify-content:center;min-width:34px;min-height:34px;padding:4px 8px;border-radius:999px;font-size:13px;font-weight:800;color:var(--blue-dark);line-height:1}
+    .language-switch a[aria-current="page"]{background:var(--blue);color:#fff;box-shadow:0 3px 8px rgba(12,77,162,.18)}
+    .language-switch a:hover,.language-switch a:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+    header .container.nav{width:min(1440px,calc(100% - 34px))}
+    .nav{gap:18px}
+    .brand-text strong{font-size:15px}
+    .brand{flex:1 1 auto}
+    @media(max-width:1240px){
+      .nav-tools{gap:12px}
+      nav ul{position:absolute;top:100%;left:0;right:0;background:#fff;border-top:1px solid var(--border);padding:16px 20px 20px;display:none;flex-direction:column;align-items:flex-start;gap:0;box-shadow:0 18px 30px rgba(12,77,162,.08)}
+      nav ul.show{display:flex}
+      nav li{width:100%}
+      nav li a{display:block;padding:10px 0}
+      .menu-btn{display:block}
+    }
+    @media(max-width:600px){
+      .nav{gap:10px;min-height:78px;padding:10px 0}
+      .brand{gap:9px}
+      .brand-logo{width:42px;height:42px;border-radius:10px}
+      .brand-text strong{font-size:12px;line-height:1.4}
+      .nav-tools{gap:8px}
+      .language-switch a{min-width:28px;min-height:30px;padding:4px 6px;font-size:12px}
+      .menu-btn{padding:4px;font-size:24px}
+    }
+</style>
+<link rel="alternate" hreflang="vi" href="index.html"><link rel="alternate" hreflang="en" href="en.html"><link rel="alternate" hreflang="x-default" href="index.html"><meta property="og:title" content="Sustainable Materials and Structures (SMS) Research Group"><meta property="og:description" content="Explore the Sustainable Materials and Structures (SMS) Research Group at The University of Danang – University of Science and Technology, Vietnam: researchers, publications, laboratory research and collaboration."><meta property="og:locale" content="en_GB"><meta property="og:type" content="website"></head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top">
+      <img class="brand-logo" src="images/logo-bkdn.webp" alt="Logo of The University of Danang – University of Science and Technology">
+      <div class="brand-text">
+        <strong>Sustainable Materials and Structures (SMS) Research Group</strong>
+        <span>Faculty of Civil Engineering · The University of Danang – University of Science and Technology</span>
+      </div>
+    </a>
+
+    <div class="nav-tools"><nav>
+      <button class="menu-btn" onclick="toggleMenu()" aria-label="Open navigation menu">☰</button>
+      <ul id="navMenu">
+        <li><a href="#gioi-thieu" onclick="closeMenu()">About</a></li>
+        <li><a href="#thanh-vien" onclick="closeMenu()">Members</a></li>
+        <li><a href="#nghien-cuu" onclick="closeMenu()">Research</a></li>
+        <li><a href="#nang-luc" onclick="closeMenu()">Achievements</a></li>
+        <li><a href="#phat-trien" onclick="closeMenu()">Our vision</a></li>
+        <li><a class="btn-nav" href="#lien-he" onclick="closeMenu()">Contact</a></li>
+      </ul>
+    </nav>
+  <div class="language-switch" role="group" aria-label="Language"><a href="index.html" lang="vi" hreflang="vi" data-language-link="" aria-label="Tiếng Việt" title="Tiếng Việt">VI</a><a href="en.html" lang="en" hreflang="en" data-language-link="" aria-label="English" title="English" aria-current="page">EN</a></div></div></div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-card">Research Group · Faculty of Civil Engineering</div>
+        <h1>SUSTAINABLE MATERIALS <br>AND STRUCTURES <span class="green">(SMS)</span></h1><div class="subtitle">Research Group</div>
+        <p>
+          SMS conducts fundamental and applied research on green construction materials, sustainable structures, structural durability, rehabilitation, earthquake engineering, and AI and machine learning in civil engineering.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#thanh-vien">Meet our members</a>
+          <a class="btn btn-secondary" href="#lien-he">Research collaboration</a>
+        </div>
+
+        <div class="hero-points">
+          <div class="hero-point">
+            <strong>Fundamental and applied research</strong>
+            <span>Connecting structural mechanics, computational modelling and practical engineering.</span>
+          </div>
+          <div class="hero-point">
+            <strong>Advanced materials, sustainable structures</strong>
+            <span>Developing efficient, durable and environmentally responsible engineering solutions.</span>
+          </div>
+          <div class="hero-point">
+            <strong>Sustainable infrastructure</strong>
+            <span>Supporting safe, resilient and long-lasting infrastructure.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img class="poster" src="images/poster-sms.png" alt="SMS research group overview poster (in Vietnamese)">
+      </div>
+    </div>
+    <div class="container lab-gallery" aria-labelledby="lab-gallery-title">
+      <div class="lab-gallery-head">
+        <h2 id="lab-gallery-title">Inside the laboratory</h2>
+        <span>Select an image to view it at full size</span>
+      </div>
+      <div class="lab-gallery-grid">
+        <a class="lab-tile" href="images/lab-thi-nghiem-dam.jpg" target="_blank" rel="noopener noreferrer"><img src="images/lab-thi-nghiem-dam.jpg" alt="Concrete beam in a structural loading test" loading="lazy"></a>
+        <a class="lab-tile" href="images/lab-chuan-bi-mau-dam.jpg" target="_blank" rel="noopener noreferrer"><img src="images/lab-chuan-bi-mau-dam.jpg" alt="Beam specimens and reinforcement being prepared in the laboratory" loading="lazy"></a>
+        <a class="lab-tile" href="images/lab-theo-doi-mau.jpg" target="_blank" rel="noopener noreferrer"><img src="images/lab-theo-doi-mau.jpg" alt="Specimens connected to monitoring equipment" loading="lazy"></a>
+        <a class="lab-tile" href="images/lab-thi-nghiem-cot.jpg" target="_blank" rel="noopener noreferrer"><img src="images/lab-thi-nghiem-cot.jpg" alt="Concrete column specimen in a compression testing machine" loading="lazy"></a>
+        <a class="lab-tile" href="images/lab-mau-cot.jpg" target="_blank" rel="noopener noreferrer"><img src="images/lab-mau-cot.jpg" alt="Concrete column specimens after testing" loading="lazy"></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="gioi-thieu">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">About</div>
+        <h2>Connecting materials, structures and sustainability</h2>
+        <p>
+          SMS is a research group within the Faculty of Civil Engineering at The University of Danang – University of Science and Technology, Vietnam. Our research addresses practical challenges in civil engineering.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>Our mission</h3>
+          <p>
+            To advance research and knowledge transfer in construction materials, structural engineering and sustainable development, while educating the next generation of civil engineers and researchers.
+          </p>
+          <p>
+            We combine experiments, analytical methods, numerical modelling, machine learning and interdisciplinary approaches to address real-world infrastructure challenges.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <h3>At a glance</h3>
+          <div class="info-list">
+            <div class="info-item">
+              <div class="info-icon">🏫</div>
+              <div>
+                <strong>Affiliation</strong>
+                <span>Faculty of Civil Engineering, The University of Danang – University of Science and Technology</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">🌏</div>
+              <div>
+                <strong>Location</strong>
+                <span>54 Nguyen Luong Bang Street, Da Nang, Vietnam</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">🤝</div>
+              <div>
+                <strong>Collaboration</strong>
+                <span>We welcome collaboration with universities, research institutes and industry partners in Vietnam and internationally.</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">🎓</div>
+              <div>
+                <strong>Education and research</strong>
+                <span>Connecting research, undergraduate and postgraduate education, and engineering practice.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="thanh-vien">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Our team</div>
+        <h2>Meet the SMS researchers</h2>
+        <p>Explore our members’ expertise and their ISI-indexed journal publications.</p>
+      </div>
+
+      <div class="members-grid">
+
+        <article class="member-card">
+          <div class="member-photo"><img src="images/nguyen-van-chinh.jpg" alt="Assoc. Prof. Nguyễn Văn Chính"></div>
+          <div class="member-body">
+            <h3>Assoc. Prof. Nguyễn Văn Chính</h3>
+            <div class="member-role">Group leader</div>
+            <div class="member-profile"><div class="member-detail"><p>PhD, 2014, Sheffield Hallam University (United Kingdom); Associate Professor, 2022, Civil Engineering.</p></div><div class="member-detail"><p>Leads the group’s research strategy and develops national and international academic partnerships.</p></div><div class="member-detail"><h4>Research interests</h4><p>Durability of reinforced concrete structures; reinforcement corrosion and structural behaviour in aggressive environments; strengthening and repair of reinforced concrete structures; sustainable construction materials, including alkali-activated concrete, geopolymers and waste-derived materials such as fly ash, blast-furnace slag and rice husk ash.</p></div></div>
+            <div class="member-contact" aria-label="Contact Nguyễn Văn Chính"><a href="tel:+84901122777"><i class="contact-symbol" aria-hidden="true">☎</i>+84 901 122 777</a><a href="mailto:nvchinh@dut.udn.vn"><i class="contact-symbol" aria-hidden="true">✉</i>nvchinh@dut.udn.vn</a></div>
+            <div class="member-actions"><a class="member-pub-link" href="#pub-nguyen-van-chinh">View 12 ISI publications <span aria-hidden="true">↓</span></a><a class="member-scholar-link" href="https://scholar.google.com/citations?user=WBbHrxUAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar profile of Nguyễn Văn Chính (opens in a new tab)">Google Scholar <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+
+        <article class="member-card">
+          <div class="member-photo"><img src="images/dang-cong-thuat.jpg" alt="Assoc. Prof. Đặng Công Thuật"></div>
+          <div class="member-body">
+            <h3>Assoc. Prof. Đặng Công Thuật</h3>
+            <div class="member-role">Core member</div>
+            <div class="member-profile"><div class="member-detail"><p>PhD, 2014, Institut Français de Mécanique Avancée (IFMA), France; Associate Professor, 2017.</p></div><div class="member-detail"><p>Contributes to the group’s research strategy and develops national and international academic partnerships.</p></div><div class="member-detail"><h4>Research interests</h4><p>Structural reliability; seismic design of buildings; structural dynamics.</p></div></div>
+            <div class="member-contact" aria-label="Contact Đặng Công Thuật"><a href="tel:+84913527757"><i class="contact-symbol" aria-hidden="true">☎</i>+84 913 527 757</a><a href="mailto:dangcongthuat@dut.udn.vn"><i class="contact-symbol" aria-hidden="true">✉</i>dangcongthuat@dut.udn.vn</a></div>
+            <div class="member-actions"><a class="member-pub-link" href="#pub-dang-cong-thuat">View 7 ISI publications <span aria-hidden="true">↓</span></a><a class="member-scholar-link" href="https://scholar.google.co.kr/citations?user=Af67EE0AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar profile of Đặng Công Thuật (opens in a new tab)">Google Scholar <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+
+        <article class="member-card">
+          <div class="member-photo"><img src="images/pham-my.jpg" alt="Dr. Phạm Mỹ"></div>
+          <div class="member-body">
+            <h3>Dr. Phạm Mỹ</h3>
+            <div class="member-role">Core member</div>
+            <div class="member-profile"><div class="member-detail"><p>PhD, 2012, Konkuk University (South Korea), Applied and Computational Mechanics.</p></div><div class="member-detail"><p>Core research member.</p></div><div class="member-detail"><h4>Research interests</h4><p>Applied mechanics; computational mechanics.</p></div></div>
+            <div class="member-contact" aria-label="Contact Phạm Mỹ"><a href="tel:+84905955069"><i class="contact-symbol" aria-hidden="true">☎</i>+84 905 955 069</a><a href="mailto:pmy@dut.udn.vn"><i class="contact-symbol" aria-hidden="true">✉</i>pmy@dut.udn.vn</a></div>
+            <div class="member-actions"><a class="member-pub-link" href="#pub-pham-my">View 8 ISI publications <span aria-hidden="true">↓</span></a><a class="member-scholar-link" href="https://scholar.google.com/citations?user=RODnDfkAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar profile of Phạm Mỹ (opens in a new tab)">Google Scholar <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+
+        <article class="member-card">
+          <div class="member-photo"><img src="images/bui-quang-hieu.jpg" alt="Dr. Bùi Quang Hiếu"></div>
+          <div class="member-body">
+            <h3>Dr. Bùi Quang Hiếu</h3>
+            <div class="member-role">Core member</div>
+            <div class="member-profile"><div class="member-detail"><p>PhD, 2019, Yokohama National University (Japan), Civil Engineering.</p></div><div class="member-detail"><p>Core research member.</p></div><div class="member-detail"><h4>Research interests</h4><p>Contact mechanics in the material point method; simulation of reinforced concrete member capacity; form-finding and structural behaviour of spatial domes and tensegrity systems.</p></div></div>
+            <div class="member-contact" aria-label="Contact Bùi Quang Hiếu"><a href="tel:+84918098406"><i class="contact-symbol" aria-hidden="true">☎</i>+84 918 098 406</a><a href="mailto:bqhieu@dut.udn.vn"><i class="contact-symbol" aria-hidden="true">✉</i>bqhieu@dut.udn.vn</a></div>
+            <div class="member-actions"><a class="member-pub-link" href="#pub-bui-quang-hieu">View 6 ISI publications <span aria-hidden="true">↓</span></a><a class="member-scholar-link" href="https://scholar.google.co.kr/citations?user=DbwrORkAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar profile of Bùi Quang Hiếu (opens in a new tab)">Google Scholar <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+
+        <article class="member-card">
+          <div class="member-photo"><img src="images/dinh-ngoc-hieu.jpg" alt="Dr. Đinh Ngọc Hiếu"></div>
+          <div class="member-body">
+            <h3>Dr. Đinh Ngọc Hiếu</h3>
+            <div class="member-role">Core member</div>
+            <div class="member-profile"><div class="member-detail"><p>PhD, 2022, Soongsil University (South Korea), Civil Engineering.</p></div><div class="member-detail"><p>Core research member.</p></div><div class="member-detail"><h4>Research interests</h4><p>Structural applications of fibre-reinforced concrete (FRC), fibre-reinforced polymers (FRP) and textile-reinforced concrete (TRC); seismic design; strengthening and rehabilitation of reinforced concrete structures.</p></div></div>
+            <div class="member-contact" aria-label="Contact Đinh Ngọc Hiếu"><a href="tel:+84947532357"><i class="contact-symbol" aria-hidden="true">☎</i>+84 947 532 357</a><a href="mailto:dnhieu@dut.udn.vn"><i class="contact-symbol" aria-hidden="true">✉</i>dnhieu@dut.udn.vn</a></div>
+            <div class="member-actions"><a class="member-pub-link" href="#pub-dinh-ngoc-hieu">View 45 ISI publications <span aria-hidden="true">↓</span></a><a class="member-scholar-link" href="https://scholar.google.co.kr/citations?user=CaVBgaIAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar profile of Đinh Ngọc Hiếu (opens in a new tab)">Google Scholar <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+
+        <article class="member-card">
+          <div class="member-photo"><img src="images/truong-gia-toai.jpg" alt="Dr. Trương Gia Toại"></div>
+          <div class="member-body">
+            <h3>Dr. Trương Gia Toại</h3>
+            <div class="member-role">Core member</div>
+            <div class="member-profile"><div class="member-detail"><p>PhD, 2020, Soongsil University (South Korea), Civil Engineering.</p></div><div class="member-detail"><p>Core research member.</p></div><div class="member-detail"><h4>Research interests</h4><p>Advanced concrete and composite materials (fibre-reinforced concrete, FRP and TRM); strength and behaviour of reinforced concrete structures; strengthening and rehabilitation; earthquake engineering; structural performance under fire and seismic loading; artificial intelligence in structural engineering.</p></div></div>
+            <div class="member-contact" aria-label="Contact Trương Gia Toại"><a href="tel:+84906491219"><i class="contact-symbol" aria-hidden="true">☎</i>+84 906 491 219</a><a href="mailto:toaitg@donga.edu.vn"><i class="contact-symbol" aria-hidden="true">✉</i>toaitg@donga.edu.vn</a></div>
+            <div class="member-actions"><a class="member-pub-link" href="#pub-truong-gia-toai">View 44 ISI publications <span aria-hidden="true">↓</span></a><a class="member-scholar-link" href="https://scholar.google.co.kr/citations?user=KVS3pXYAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar profile of Trương Gia Toại (opens in a new tab)">Google Scholar <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+
+        <article class="member-card">
+          <div class="member-photo"><img src="images/le-xuan-dung.jpg" alt="Lê Xuân Dũng, MSc"></div>
+          <div class="member-body">
+            <h3>Lê Xuân Dũng, MSc</h3>
+            <div class="member-role">Supporting member</div>
+            <p>Provides laboratory technical support and assists with the group’s research activities and academic partnerships.</p>
+          </div>
+        </article>
+
+        <article class="member-card">
+          <div class="member-photo"><img src="images/chau-ngoc-bao.jpg" alt="Châu Ngọc Bảo, MSc"></div>
+          <div class="member-body">
+            <h3>Châu Ngọc Bảo, MSc</h3>
+            <div class="member-role">Supporting member</div>
+            <p>Provides laboratory technical support and assists with the group’s research activities and academic partnerships.</p>
+          </div>
+        </article>
+
+      </div>
+      <div class="publication-area" id="cong-bo-isi">
+        <div class="publication-heading"><div><h3>ISI journal publications by member</h3>
+        <p>Compiled from members’ academic CVs · Newest first</p></div></div>
+        <div class="publication-list"><details class="publication-group" id="pub-nguyen-van-chinh"><summary><span class="pub-name">Nguyễn Văn Chính</span><span class="pub-count">12 publications</span><span class="pub-chevron" aria-hidden="true">⌄</span></summary><ol class="pub-items"><li><span class="pub-year">2026</span><div><span class="pub-title">Analytical Model for Load-deflection Responses of Corroded Slender Reinforced Concrete Beams Considering Various Corrosion Schemes</span><span class="pub-journal">International Journal of Civil Engineering Online: 29/4/2026 Issue date: 9/2026</span></div></li><li><span class="pub-year">2025</span><div><span class="pub-title">Mechanical model for shear strength prediction of corrosion-damaged reinforced concrete beams under various corrosion schemes</span><span class="pub-journal">Engineering Structures 335 (2025) 120357</span></div></li><li><span class="pub-year">2025</span><div><span class="pub-title">Potential Energy Optimization Approach in the Form-Finding of Tensegrities and Cable– Strut Systems</span><span class="pub-journal">Structural Engineering International Vol 35 (2)</span></div></li><li><span class="pub-year">2022</span><div><span class="pub-title">Experimental and numerical evaluation of the structural performance of corroded reinforced concrete beams under different corrosion schemes</span><span class="pub-journal">Structures, Volume 45, November 2022: 2318-2331</span></div></li><li><span class="pub-year">2022</span><div><span class="pub-title">A combination of genetic algorithm and dynamic relaxation method for practical form-finding of tensegrity structures</span><span class="pub-journal">Advances in Structural Engineering. 2022;25(11):2237- 2254.</span></div></li><li><span class="pub-year">2020</span><div><span class="pub-title">Properties of rice straw reinforced alkali activated cementitious composites’</span><span class="pub-journal">Construction and Building Materials 261 (2020) 120536</span></div></li><li><span class="pub-year">2020</span><div><span class="pub-title">Effect of locally source pozzolan on corrosion resistance of steel in reinforced concrete beams</span><span class="pub-journal">International Journal of Civil Engineering. 2020, 18:619–630</span></div></li><li><span class="pub-year">2019</span><div><span class="pub-title">Effect of Vietnamese fly ash on selected physical properties, durability and probability of corrosion of steel in concrete</span><span class="pub-journal">Materials 2019, 12(4), 593</span></div></li><li><span class="pub-year">2018</span><div><span class="pub-title">Effect of current density on accelerated corrosion of reinforcing steel bars in concrete’</span><span class="pub-journal">Structure and Infrastructure Engineering, Vol 14 (11) 2018: 1535-1546</span></div></li><li><span class="pub-year">2018</span><div><span class="pub-title">Optimised cathodic protection design for maximum bond performance in reinforced concrete</span><span class="pub-journal">Materials and Corrosion, Vol 69, 2018: 1151-1162</span></div></li><li><span class="pub-year">2016</span><div><span class="pub-title">Near-surface mounted carbon fibre rod used for combined strengthening and cathodic protection for reinforced concrete structures</span><span class="pub-journal">Structure and Infrastructure Engineering, Vol 12(3) 2016, 356- 365</span></div></li><li><span class="pub-year">2015</span><div><span class="pub-title">Dual function carbon fibre fabric strengthening and ICCP anode for reinforced concrete structures</span><span class="pub-journal">Materials and Structures, Vol 48(7), 2015, 2157- 2167.</span></div></li></ol></details><details class="publication-group" id="pub-dang-cong-thuat"><summary><span class="pub-name">Đặng Công Thuật</span><span class="pub-count">7 publications</span><span class="pub-chevron" aria-hidden="true">⌄</span></summary><ol class="pub-items"><li><span class="pub-year">2026</span><div><span class="pub-title">Thermal free vibration and thermal buckling of FGP beams with temperature- dependent material properties</span><span class="pub-journal">Iranian Journal of Science and Technology, Transactions of Mechanical Engineering 50, no. 1 (2026): 283-302.</span></div></li><li><span class="pub-year">2024</span><div><span class="pub-title">Effects of microfibre parameters on the tensile properties of fabric- reinforced cementitious mortar</span><span class="pub-journal">Journal of Industrial Textiles 54 (2024): 152808372412276 28</span></div></li><li><span class="pub-year">2024</span><div><span class="pub-title">Sensitivity analysis of parameters affecting the seismic performance of RC columns strengthened by fabric-reinforced cementitious mortar</span><span class="pub-journal">Materials Research Express 11.5 (2024): 055602</span></div></li><li><span class="pub-year">2023</span><div><span class="pub-title">Experimental study on compressive and flexural performance of lightweight cement-based composites reinforced with hybrid short fibers</span><span class="pub-journal">Materials 16.12 (2023): 4457</span></div></li><li><span class="pub-year">2017</span><div><span class="pub-title">A novel method based on maximum likelihood estimation for the construction of seismic fragility curves using numerical simulations</span><span class="pub-journal">Comptes Rendus Mécanique 345.10 (2017): 678-689.</span></div></li><li><span class="pub-year">2017</span><div><span class="pub-title">Experimental Study on Structural Performance of RC Exterior Beam‐ Column Joints Retrofitted by Steel Jacketing and Haunch Element under Cyclic Loading Simulating Earthquake</span><span class="pub-journal">Advances in Civil Engineering 2017.1 (2017): 9263460</span></div></li><li><span class="pub-year">2016</span><div><span class="pub-title">A comparative study of construction methods for seismic fragility curves using numerical simulations</span><span class="pub-journal">Mechanics &amp; Industry 17.6 (2016): 602.</span></div></li></ol></details><details class="publication-group" id="pub-pham-my"><summary><span class="pub-name">Phạm Mỹ</span><span class="pub-count">8 publications</span><span class="pub-chevron" aria-hidden="true">⌄</span></summary><ol class="pub-items"><li><span class="pub-year">2024</span><div><span class="pub-title">Effects of microfibre parameters on the tensile properties of fabric- reinforced cementitious mortar</span><span class="pub-journal">Journal of Industrial Textiles</span></div></li><li><span class="pub-year">2024</span><div><span class="pub-title">Sensitivity analysis of parameters affecting the seismic performance of RC columns strengthened by fabric-reinforced cementitious mortar</span><span class="pub-journal">Materials Research Express</span></div></li><li><span class="pub-year">2024</span><div><span class="pub-title">Numerical Study of Bearing Strength of Infilled Concrete in Large Diameter CFST Column Reinforced by Shear Stoppers</span><span class="pub-journal">Designs</span></div></li><li><span class="pub-year">2023</span><div><span class="pub-title">Experimental Study on Compressive and Flexural Performance of Lightweight Cement- Based Composites Reinforced with Hybrid Short Fibers</span><span class="pub-journal">Materials</span></div></li><li><span class="pub-year">2020</span><div><span class="pub-title">Arbitrary Lagrangian- Eulerian formulations for cutting pattern generation of tensile membrane structures</span><span class="pub-journal">Journal of Asian Architecture and Building Engineering</span></div></li><li><span class="pub-year">2014</span><div><span class="pub-title">Novel approach to predict the varying thicknesses of a PVA film during a roll- to-roll process</span><span class="pub-journal">International Journal of Mechanical Sciences</span></div></li><li><span class="pub-year">2011</span><div><span class="pub-title">Development of a Peristaltic Micropump with Lightweight Piezo- Composite Actuator Membrane</span><span class="pub-journal">International Journal of Aeronautical and Space Sciences No: 12(1). Pages: 69-77</span></div></li><li><span class="pub-year">2008</span><div><span class="pub-title">Development of a Peristaltic Micropump for Bio-Medical Applications Based on Mini LIPCA</span><span class="pub-journal">Journal of Bionic Engineering</span></div></li></ol></details><details class="publication-group" id="pub-bui-quang-hieu"><summary><span class="pub-name">Bùi Quang Hiếu</span><span class="pub-count">6 publications</span><span class="pub-chevron" aria-hidden="true">⌄</span></summary><ol class="pub-items"><li><span class="pub-year">2026</span><div><span class="pub-title">Analytical Model for Load-deflection Responses of Corroded Slender Reinforced Concrete Beams Considering Various Corrosion Schemes</span><span class="pub-journal">International Journal of Civil Engineering Online: 29/4/2026 Issue date: 9/2026</span></div></li><li><span class="pub-year">2025</span><div><span class="pub-title">A New Contact Algorithm for the Total-Lagrangian Material Point Method</span><span class="pub-journal">International Journal for Numerical Methods in Engineering 126 (17), e70105</span></div></li><li><span class="pub-year">2025</span><div><span class="pub-title">Mechanical model for shear strength prediction of corrosion-damaged reinforced concrete beams under various corrosion schemes</span><span class="pub-journal">Engineering Structures 335 (2025) 120357</span></div></li><li><span class="pub-year">2024</span><div><span class="pub-title">Potential Energy Optimization Approach in the Form-Finding of Tensegrities and Cable– Strut Systems</span><span class="pub-journal">Structural Engineering International 35 (2), 227-239</span></div></li><li><span class="pub-year">2022</span><div><span class="pub-title">Experimental and numerical evaluation of the structural performance of corroded reinforced concrete beams under different corrosion schemes</span><span class="pub-journal">Structures, Volume 45, November 2022: 2318-2331</span></div></li><li><span class="pub-year">2022</span><div><span class="pub-title">A combination of genetic algorithm and dynamic relaxation method for practical form-finding of tensegrity structures</span><span class="pub-journal">Advances in Structural Engineering. 2022;25(11):2237- 2254.</span></div></li></ol></details><details class="publication-group" id="pub-dinh-ngoc-hieu"><summary><span class="pub-name">Đinh Ngọc Hiếu</span><span class="pub-count">45 publications</span><span class="pub-chevron" aria-hidden="true">⌄</span></summary><ol class="pub-items"><li><span class="pub-year">2026</span><div><span class="pub-title">Strain-based analytical model for predicting one-way shear strength of slender FRP-reinforced concrete beams with and without transverse reinforcement</span><span class="pub-journal">Composite Structures, 389, 120404</span></div></li><li><span class="pub-year">2026</span><div><span class="pub-title">Shear behavior of slender concrete beams reinforced with longitudinal GFRP bars and carbon-fiber mesh stirrups: Experimental and analytical investigations</span><span class="pub-journal">Construction and Building Materials, 531, 146665</span></div></li><li><span class="pub-year">2026</span><div><span class="pub-title">Analytical Model for Load-deflection Responses of Corroded Slender Reinforced Concrete Beams Considering Various Corrosion Schemes</span><span class="pub-journal">International Journal of Civil Engineering</span></div></li><li><span class="pub-year">2026</span><div><span class="pub-title">Punching shear behavior of concrete slab-column connections reinforced with glass fiber-reinforced polymer (GFRP) bars with different design parameters: experimental study, finite element simulation, and theoretical model</span><span class="pub-journal">Journal of Building Engineering, 117, 114771</span></div></li><li><span class="pub-year">2026</span><div><span class="pub-title">Shear strength assessment of FRP-reinforced concrete beams without shear reinforcement: database-driven approach and prediction models</span><span class="pub-journal">Magazine of Concrete Research, 78, no. 1-2: 18-44.</span></div></li><li><span class="pub-year">2025</span><div><span class="pub-title">Axial compressive behavior of RC prisms confined by CFRP mesh stirrups, simulating compression zone in conventional structural walls</span><span class="pub-journal">Structures, 81, 110266</span></div></li><li><span class="pub-year">2025</span><div><span class="pub-title">In-plane lateral strength prediction of unreinforced masonry walls subjected to lateral loads using optimized boosting algorithms</span><span class="pub-journal">Structures, 80, 110025</span></div></li><li><span class="pub-year">2025</span><div><span class="pub-title">Modification of KDS 14 Design Model for Punching Shear Strength of Slab–Column Connections Reinforced with Various Types of FRP Rebars</span><span class="pub-journal">International Journal of Concrete Structures and Materials, 19(1), 16</span></div></li><li><span class="pub-year">2025</span><div><span class="pub-title">Experimental and analytical investigations of the dynamic characteristics of a mold transformer with rotary friction dampers based on shaking table tests</span><span class="pub-journal">Earthquake Engineering and Engineering Vibration, 24(2), 451-472</span></div></li><li><span class="pub-year">2025</span><div><span class="pub-title">Shear performance of RC slab-wall connections considering out-of-plane offsets reinforced with various types of shear reinforcement details</span><span class="pub-journal">European Journal of Environmental and Civil Engineering, 29(8), 1649-1673</span></div></li><li><span class="pub-year">2025</span><div><span class="pub-title">Evaluation of the KDS 14 Draft Design Method for Predicting the Shear Strength of Prestressed Concrete Beams</span><span class="pub-journal">International Journal of Concrete Structures and Materials, 19(1), 50</span></div></li><li><span class="pub-year">2025</span><div><span class="pub-title">Mechanical model for shear strength prediction of corrosion-damaged reinforced concrete beams under various corrosion schemes</span><span class="pub-journal">Engineering Structures, 335, 120357</span></div></li><li><span class="pub-year">2025</span><div><span class="pub-title">Cyclic Axial Behavior of Rectangular RC Prisms Lightly Confined by CFRP Mesh Simulating Shear Wall Boundary Elements</span><span class="pub-journal">International Journal of Civil Engineering, 23(9), 1847–1863</span></div></li><li><span class="pub-year">2025</span><div><span class="pub-title">Axial Compressive Behavior of Concrete Confined by Sustainable Lightweight Fabric-Reinforced Cementitious Matrix</span><span class="pub-journal">Journal of Composites for Construction, 29(2), 04025013</span></div></li><li><span class="pub-year">2025</span><div><span class="pub-title">Seismic Performance of Unreinforced Masonry Walls with Various Retrofitting Methods</span><span class="pub-journal">International Journal of Architectural Heritage, 19(9), 1714–1736</span></div></li><li><span class="pub-year">2025</span><div><span class="pub-title">Evaluation of KDS 14 draft model for one-way shear strength of slender concrete members reinforced with fiber-reinforced polymer (FRP) rebars</span><span class="pub-journal">International Journal of Concrete Structures and Materials, 19(1), 63</span></div></li><li><span class="pub-year">2024</span><div><span class="pub-title">Simplification of KDS 14 Design Method for Slab–Column Connections Subjected to Unbalanced Moment</span><span class="pub-journal">International Journal of Concrete Structures and Materials, 18(1), 72</span></div></li><li><span class="pub-year">2024</span><div><span class="pub-title">Analytical Model for the In-Plane Lateral Capacity of Unreinforced Masonry Walls Based on Effective Compression Zone Failure Mechanism</span><span class="pub-journal">Journal of Earthquake Engineering, 28(16), 4721–4748</span></div></li><li><span class="pub-year">2024</span><div><span class="pub-title">Shear strength model of FRP-reinforced concrete beams without shear reinforcement</span><span class="pub-journal">Structures, 64, 106520</span></div></li><li><span class="pub-year">2024</span><div><span class="pub-title">Tensile performance and cracking characteristics of sustainable textile-reinforced cementitious composites utilizing expanded glass aggregate and fly ash replacement</span><span class="pub-journal">Construction and Building Materials, 425, 136084</span></div></li><li><span class="pub-year">2024</span><div><span class="pub-title">Punching Shear Strength of Isolated Concrete Column Footings with Low Shear Span-Depth Ratios</span><span class="pub-journal">ACI Structural Journal, 121(3), 25–41</span></div></li><li><span class="pub-year">2024</span><div><span class="pub-title">Effects of microfibre parameters on the tensile properties of fabric-reinforced cementitious mortar</span><span class="pub-journal">Journal of Industrial Textiles, 54, 1–29</span></div></li><li><span class="pub-year">2023</span><div><span class="pub-title">Tensile behavior of lightweight carbon textile-reinforced cementitious composites with dispersed fibers</span><span class="pub-journal">Construction and Building Materials, 384, 131455</span></div></li><li><span class="pub-year">2023</span><div><span class="pub-title">Experimental study on compressive and flexural performance of lightweight cement-based composites reinforced with hybrid short fibers</span><span class="pub-journal">Materials</span></div></li><li><span class="pub-year">2023</span><div><span class="pub-title">Experimental investigation on flexural and direct shear behaviors of specimens made of lightweight carbon textile‐reinforced cementitious composites</span><span class="pub-journal">Structural Concrete, 24(4), 5027–5054</span></div></li><li><span class="pub-year">2022</span><div><span class="pub-title">Tensile behavioral characteristics of lightweight carbon textile-reinforced cementitious composites</span><span class="pub-journal">Journal of Building Engineering, 57, 104848</span></div></li><li><span class="pub-year">2022</span><div><span class="pub-title">Hysteresis response of rotary friction dampers developed for seismic operational performance of non-structural components vulnerable to overturning</span><span class="pub-journal">Structures</span></div></li><li><span class="pub-year">2022</span><div><span class="pub-title">Seismic retrofit of unreinforced masonry walls using precast panels of fiber-reinforced cementitious composite</span><span class="pub-journal">Journal of Building Engineering, 53, 104548</span></div></li><li><span class="pub-year">2022</span><div><span class="pub-title">Time history analysis for investigation of dynamic behavioral characteristics of uninterruptible power supply system</span><span class="pub-journal">Journal of Structural Integrity and Maintenance</span></div></li><li><span class="pub-year">2022</span><div><span class="pub-title">Investigation of Reinforced Concrete Inclined Shear Plane Strengthened by U-Wrapped TRM jacket with Different Anchorage Details using Modified Push-off Tests</span><span class="pub-journal">Arabian Journal for Science and Engineering, 47(4), 4003–4021</span></div></li><li><span class="pub-year">2021</span><div><span class="pub-title">Cyclic behavioral characteristics of RC beams strengthened by U-wrapped TRM jacket with anchorage details</span><span class="pub-journal">Engineering Structures, 247, 113205</span></div></li><li><span class="pub-year">2021</span><div><span class="pub-title">Direct shear behavior after elevated temperature exposure of epoxy-coated carbon textile-reinforced mortar (TRM) modified with different types of microfibers</span><span class="pub-journal">Materials and Structures, 54(4), Article 151</span></div></li><li><span class="pub-year">2021</span><div><span class="pub-title">Direct shear behavior of precast panel connections with cast-in-place shear keys using steel fiber-reinforced cementitious mortar (SFRCM)</span><span class="pub-journal">Structures, 32, 2130–2142</span></div></li><li><span class="pub-year">2021</span><div><span class="pub-title">Effect of dispersed micro-fibers on tensile behavior of uncoated carbon textile-reinforced cementitious mortar after high-temperature exposure</span><span class="pub-journal">Cement and Concrete Composites, 118, 103949</span></div></li><li><span class="pub-year">2021</span><div><span class="pub-title">Experimental study on the seismic performance of RC columns retrofitted by lap-spliced textile-reinforced mortar jackets after high-temperature exposure</span><span class="pub-journal">Composite Structures, 256, 113108</span></div></li><li><span class="pub-year">2020</span><div><span class="pub-title">Seismic performance of reinforced concrete columns retrofitted by textile-reinforced mortar jackets</span><span class="pub-journal">Structure and Infrastructure Engineering, 16(10), 1364–1381</span></div></li><li><span class="pub-year">2020</span><div><span class="pub-title">Tensile characteristics of carbon fiber-textile reinforced mortar with aluminum oxide treated anchorage surfaces</span><span class="pub-journal">Advanced Composite Materials, 29(5), 509–527</span></div></li><li><span class="pub-year">2020</span><div><span class="pub-title">Modeling parameters for the nonlinear analysis of reinforced concrete beams under cyclic loading</span><span class="pub-journal">Engineering Structures, 216, 110715</span></div></li><li><span class="pub-year">2020</span><div><span class="pub-title">Direct shear behavior of cementitious mortar reinforced by carbon fiber textile</span><span class="pub-journal">Construction and Building Materials, 249, 118760</span></div></li><li><span class="pub-year">2020</span><div><span class="pub-title">Study on seismic performance of a mold transformer through shaking table tests</span><span class="pub-journal">Applied Sciences, 10(1), 361</span></div></li><li><span class="pub-year">2019</span><div><span class="pub-title">Seismic Vulnerability Assessment of Hybrid Mold Transformer Based on Dynamic Analyses</span><span class="pub-journal">Applied Sciences, 9(15), 3180</span></div></li><li><span class="pub-year">2017</span><div><span class="pub-title">Seismic performance of exterior RC beam–column joints retrofitted using various retrofit solutions</span><span class="pub-journal">International Journal of Concrete Structures and Materials, 11(3), 415–433</span></div></li><li><span class="pub-year">2017</span><div><span class="pub-title">Exterior Beam‐Column Joints Retrofitted by Steel Jacketing and Haunch Element under Cyclic Loading Simulating Earthquake Excitation.</span><span class="pub-journal">Advances in Civil Engineering, 2017(1), 9263460.</span></div></li><li><span class="pub-year">2017</span><div><span class="pub-title">Behaviour of non-seismic detailed reinforced-concrete beam–column connections</span><span class="pub-journal">Proceedings of the Institution of Civil Engineers-Structures and Buildings, 170(7), 504–520</span></div></li><li><span class="pub-year">2016</span><div><span class="pub-title">Mechanical properties and modeling of amorphous metallic fiber-reinforced concrete in compression</span><span class="pub-journal">International Journal of Concrete Structures and Materials, 10(2), 221–236</span></div></li></ol></details><details class="publication-group" id="pub-truong-gia-toai"><summary><span class="pub-name">Trương Gia Toại</span><span class="pub-count">44 publications</span><span class="pub-chevron" aria-hidden="true">⌄</span></summary><ol class="pub-items"><li><span class="pub-year">2026</span><div><span class="pub-title">A combined piezoelectric active sensing with hybrid 1D CNN-LSTM model for damage detection in structural joints of wind energy system</span><span class="pub-journal">Smart Structures and Systems, Vol. 37, No. 5, pp. 377– 405</span></div></li><li><span class="pub-year">2026</span><div><span class="pub-title">CNN-self-attention framework for enhanced impedance-based damage detection under vibration and noisy environments</span><span class="pub-journal">Journal of Civil Structural Health Monitoring, Vol. 16, Article 66</span></div></li><li><span class="pub-year">2025</span><div><span class="pub-title">Estimating punching shear strength of recycled aggregate reinforced concrete flat slabs</span><span class="pub-journal">Journal of Structural Integrity and Maintenance, Vol. 10, No. 1, Article 2465180</span></div></li><li><span class="pub-year">2025</span><div><span class="pub-title">In-plane lateral strength prediction of unreinforced masonry walls subjected to lateral loads using optimized boosting algorithms</span><span class="pub-journal">Structures, Vol. 80, Article 110025</span></div></li><li><span class="pub-year">2025</span><div><span class="pub-title">Shear strength assessment of FRP-reinforced concrete beams without shear reinforcement: database-driven approach and prediction models</span><span class="pub-journal">Magazine of Concrete Research, pp. 1–27</span></div></li><li><span class="pub-year">2025</span><div><span class="pub-title">Impedance monitoring and damage detection in bottom-fixed wind turbines under blade rotation using linear discriminant analysis: A lab-scaled experimental investigation</span><span class="pub-journal">Smart Structures and Systems, Vol. 36, No. 6, pp. 325– 341</span></div></li><li><span class="pub-year">2024</span><div><span class="pub-title">Fire resistance of axially loaded semi-precast composite columns</span><span class="pub-journal">Structures, Vol. 59, Article 105697</span></div></li><li><span class="pub-year">2024</span><div><span class="pub-title">Engineering punching shear strength of flat slabs predicted by nature- inspired metaheuristic optimized regression system</span><span class="pub-journal">Frontiers of Structural and Civil Engineering, Vol. 18, No. 4, pp. 551–567</span></div></li><li><span class="pub-year">2024</span><div><span class="pub-title">Concrete spalling identification and fire resistance prediction for fired RC columns using machine learning-based approaches</span><span class="pub-journal">Fire Technology, Vol. 60, pp. 1823– 1866</span></div></li><li><span class="pub-year">2024</span><div><span class="pub-title">Shear strength model of FRP-reinforced concrete beams without shear reinforcement</span><span class="pub-journal">Structures, Vol. 64, Article 106520</span></div></li><li><span class="pub-year">2024</span><div><span class="pub-title">Structural condition assessment of steel anchorage using convolutional neural networks and admittance response</span><span class="pub-journal">Buildings, Vol. 14, No. 6, Article 1635</span></div></li><li><span class="pub-year">2024</span><div><span class="pub-title">Enhancement of PZT- based damage detection in real-scale post-tensioned anchorage under ambient conditions</span><span class="pub-journal">Journal of Constructional Steel Research, Vol. 220, Article 108841</span></div></li><li><span class="pub-year">2024</span><div><span class="pub-title">EM admittance-based automatic damage assessment in plate structures via 1D CNN- based deep learning models</span><span class="pub-journal">Frontiers of Structural and Civil Engineering, Vol. 18, pp. 1730– 1751</span></div></li><li><span class="pub-year">2024</span><div><span class="pub-title">Estimating flexural strength of precast deck joints using Monte Carlo model averaging of non- fine-tuned machine learning models</span><span class="pub-journal">Frontiers of Structural and Civil Engineering, Vol. 18, pp. 1888– 1901</span></div></li><li><span class="pub-year">2022</span><div><span class="pub-title">Punching shear strength of RC column footings considering soil-footing friction</span><span class="pub-journal">Structures, Vol. 36, pp. 314–329</span></div></li><li><span class="pub-year">2022</span><div><span class="pub-title">Buckling analysis of the porous sandwich functionally graded plates resting on Pasternak foundations by Navier solution combined with a new refined quasi-3D hyperbolic shear deformation theory</span><span class="pub-journal">Mechanics Based Design of Structures and Machines</span></div></li><li><span class="pub-year">2022</span><div><span class="pub-title">Dynamic characteristics of combined isolation systems using rubber and wire isolators</span><span class="pub-journal">Nuclear Engineering and Technology, Vol. 54, No. 3, pp. 1071–1084</span></div></li><li><span class="pub-year">2022</span><div><span class="pub-title">Assessment of punching shear strength of FRP-RC slab-column connections using machine learning algorithms</span><span class="pub-journal">Engineering Structures, Vol. 255, Article 113898</span></div></li><li><span class="pub-year">2022</span><div><span class="pub-title">Punching shear strength of interior concrete slab- column connections reinforced with FRP flexural and shear reinforcement</span><span class="pub-journal">Journal of Building Engineering, Vol. 46, Article 103692</span></div></li><li><span class="pub-year">2022</span><div><span class="pub-title">Column-to-beam flexural strength ratio for performance-based design of RC moment frames</span><span class="pub-journal">Journal of Building Engineering, Vol. 46, Article 103645</span></div></li><li><span class="pub-year">2022</span><div><span class="pub-title">Experimental investigations of the seismic performance of base-isolated uninterruptible power supply (UPS) through shaking table tests</span><span class="pub-journal">Shock and Vibration, Article ID 2304290</span></div></li><li><span class="pub-year">2022</span><div><span class="pub-title">Implementation of boosting algorithms for predictions of punching shear strength of RC column footings</span><span class="pub-journal">Structures, Vol. 46, pp. 521–538</span></div></li><li><span class="pub-year">2021</span><div><span class="pub-title">Development of extreme gradient boosting model for prediction of punching shear resistance of R/C interior slabs</span><span class="pub-journal">Engineering Structures, Vol. 235, Article 112067</span></div></li><li><span class="pub-year">2021</span><div><span class="pub-title">Investigations of direct shear characteristics of cementitious mortar reinforced by steel and nylon fibers</span><span class="pub-journal">European Journal of Environmental and Civil Engineering</span></div></li><li><span class="pub-year">2021</span><div><span class="pub-title">Shear design for prestressed concrete beams based on compression zone failure mechanism</span><span class="pub-journal">Structures and Buildings, Vol. 174, No. 7, pp. 561–580</span></div></li><li><span class="pub-year">2020</span><div><span class="pub-title">Punching strength of concrete footings based on the compression zone failure mechanism</span><span class="pub-journal">Structures and Buildings, Vol. 173, No. 7, pp. 523–534</span></div></li><li><span class="pub-year">2020</span><div><span class="pub-title">Investigation on mode I fracture toughness of woven carbon fiber reinforced polymer composites incorporating nanomaterials</span><span class="pub-journal">Polymers, Vol. 12, No. 11, Article 2512</span></div></li><li><span class="pub-year">2020</span><div><span class="pub-title">Effect of short multi- walled carbon nanotubes on mode I fracture toughness of woven carbon fiber reinforced polymer composites</span><span class="pub-journal">Construction and Building Materials, Vol. 259, Article 119696</span></div></li><li><span class="pub-year">2019</span><div><span class="pub-title">Tensile behavior of hybrid composites of carbon fibers-steel wire mesh reinforced polymer</span><span class="pub-journal">Mechanics of Advanced Materials and Structures, Vol. 28, No. 2</span></div></li><li><span class="pub-year">2019</span><div><span class="pub-title">Mechanical performance and durability of latex- modified fiber-reinforced concrete</span><span class="pub-journal">Journal of Advanced Concrete Technology, Vol. 17, No. 2, pp. 79– 92</span></div></li><li><span class="pub-year">2019</span><div><span class="pub-title">Tensile behaviors of lap- spliced carbon fiber-textile reinforced mortar composites exposed to high temperature</span><span class="pub-journal">Materials, Vol. 12, No. 9, Article 1512</span></div></li><li><span class="pub-year">2019</span><div><span class="pub-title">Effect of harsh conditions on the tensile behavior of lap-spliced carbon fiber textile-reinforced mortar (TRM) with different surface treatment methods</span><span class="pub-journal">Applied Sciences, Vol. 9, Article 3087</span></div></li><li><span class="pub-year">2019</span><div><span class="pub-title">Tensile behavior of on- and off-axis carbon fiber reinforced polymer composites incorporating steel wire mesh</span><span class="pub-journal">Mechanics of Materials, Vol. 137, Article 103131</span></div></li><li><span class="pub-year">2019</span><div><span class="pub-title">Tensile behavior of carbon fiber reinforced polymer composites incorporating nanomaterials after exposure to elevated temperature</span><span class="pub-journal">Journal of Nanomaterials, 2019, Article ID 4139208</span></div></li><li><span class="pub-year">2018</span><div><span class="pub-title">Effect of multiwalled carbon nanotubes and electroless copper plating on the tensile behavior of carbon fiber reinforced polymers</span><span class="pub-journal">Advances in Materials Science and Engineering, Article ID 8264138</span></div></li><li><span class="pub-year">2018</span><div><span class="pub-title">Flexural behavior of RC beams strengthened with NSM GFRP strips after exposed to high temperatures</span><span class="pub-journal">Engineering Structures, Vol. 173, pp. 203–215</span></div></li><li><span class="pub-year">2018</span><div><span class="pub-title">Tensile properties of carbon fiber-textile reinforced mortar (TRM) characterized by different anchorage methods</span><span class="pub-journal">International Journal of Concrete Structures and Materials, Vol. 12, Article 73</span></div></li><li><span class="pub-year">2017</span><div><span class="pub-title">Seismic performance of reinforced concrete columns retrofitted by various methods</span><span class="pub-journal">Engineering Structures, Vol. 134, pp. 217–235</span></div></li><li><span class="pub-year">2017</span><div><span class="pub-title">Seismic performance of exterior RC beam-column joints retrofitted using various retrofit solutions</span><span class="pub-journal">International Journal of Concrete Structures and Materials, Vol. 11, No. 3, pp. 415–433</span></div></li><li><span class="pub-year">2017</span><div><span class="pub-title">Punching-shear behaviors of RC-column footings with various reinforcement and strengthening details</span><span class="pub-journal">Engineering Structures, Vol. 151, pp. 282–296</span></div></li><li><span class="pub-year">2017</span><div><span class="pub-title">Seismic behaviors of thin slender structural walls reinforced with amorphous metallic fibers</span><span class="pub-journal">Engineering Structures, Vol. 152, pp. 102–115</span></div></li><li><span class="pub-year">2016</span><div><span class="pub-title">Seismic performance of lightly shear reinforced RC columns</span><span class="pub-journal">Engineering Structures, Vol. 126, pp. 490–504</span></div></li><li><span class="pub-year">2015</span><div><span class="pub-title">Punching shear behavior of shear reinforced concrete slabs</span><span class="pub-journal">Structures and Buildings, Vol. 168, No. 6, pp. 402–420</span></div></li><li><span class="pub-year">2015</span><div><span class="pub-title">Restrained shrinkage cracking of amorphous metallic fibre-reinforced concrete</span><span class="pub-journal">Structures and Buildings, Vol. 168, No. 12, pp. 902–914</span></div></li></ol></details></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section research" id="nghien-cuu">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Research interests</div>
+        <h2>Our research themes</h2>
+        <p>
+          Research spanning sustainable materials, structural performance and data-driven engineering.
+        </p>
+      </div>
+
+      <div class="research-grid">
+        <article class="research-card">
+          <div class="research-icon">🌿</div>
+          <div>
+            <h3>Green, low-carbon construction materials</h3>
+            <p>Developing environmentally responsible materials to reduce emissions and improve sustainability in construction.</p>
+          </div>
+        </article>
+
+        <article class="research-card">
+          <div class="research-icon">🧪</div>
+          <div>
+            <h3>High-performance and smart construction materials</h3>
+            <p>Exploring advanced materials with enhanced performance, specialised functions and adaptive capabilities for modern structures.</p>
+          </div>
+        </article>
+
+        <article class="research-card">
+          <div class="research-icon">🌊</div>
+          <div>
+            <h3>Durability and service life of reinforced concrete structures</h3>
+            <p>Investigating structural durability in aggressive environments, particularly marine exposure, to improve reliability and service life.</p>
+          </div>
+        </article>
+
+        <article class="research-card">
+          <div class="research-icon">🧱</div>
+          <div>
+            <h3>Structural strengthening with sustainable and novel materials</h3>
+            <p>Developing strengthening solutions for existing structures using FRP, FRCM/TRM and other advanced material systems.</p>
+          </div>
+        </article>
+
+        <article class="research-card">
+          <div class="research-icon">🏗️</div>
+          <div>
+            <h3>Plate, shell and tensegrity structures</h3>
+            <p>Investigating the mechanics, modelling, analysis and applications of lightweight, efficient structural systems.</p>
+          </div>
+        </article>
+
+        <article class="research-card">
+          <div class="research-icon">🏢</div>
+          <div>
+            <h3>Earthquake engineering and seismic resilience</h3>
+            <p>Developing and evaluating solutions to improve earthquake resistance, structural performance and safety.</p>
+          </div>
+        </article>
+
+        <article class="research-card" style="grid-column:1 / -1;">
+          <div class="research-icon">🤖</div>
+          <div>
+            <h3>AI and machine learning for structures and sustainable materials</h3>
+            <p>Applying data-driven methods, machine learning and AI to prediction, optimisation, reliability assessment and the development of civil engineering solutions.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="nang-luc">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Research achievements</div>
+        <h2>Selected achievements</h2>
+        <p>Research outputs and activities reported by SMS members.</p>
+      </div>
+
+      <div class="stats-grid">
+        <article class="stat-card">
+          <div class="stat-number">90+</div>
+          <h3>ISI journal papers</h3>
+          <p>International journal publications in construction materials and structural engineering.</p>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-number" style="color:var(--blue);">40+</div>
+          <h3>SCIE papers (Q1/Q2)</h3>
+          <p>Publications in Q1/Q2 journals over the past five years.</p>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-number" style="color:#f28c00;">4</div>
+          <h3>Textbooks and reference books</h3>
+          <p>Supporting civil engineering education, research and academic development.</p>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-number" style="color:#d13131;">1</div>
+          <h3>NAFOSTED-funded project</h3>
+          <p>National research funding supporting the group’s scientific work.</p>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-number" style="color:#1d89d1;">7+</div>
+          <h3>Ministry- and university-funded projects</h3>
+          <p>Group members serve as principal investigators and research collaborators.</p>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-number" style="color:#3aa451;">6+</div>
+          <h3>Institutional research projects</h3>
+          <p>Institutional projects supporting research and the development of new directions.</p>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-number" style="color:#7b4ddb;">Numerous</div>
+          <h3>Domestic journal papers</h3>
+          <p>Publications contributing to Vietnam’s academic community and construction practice.</p>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-number" style="color:#1f9b4e;">8</div>
+          <h3>Group members</h3>
+          <p>A team comprising the group leader, core researchers and supporting members.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="phat-trien">
+    <div class="container split-grid">
+      <div class="box">
+        <h3>Our vision</h3>
+        <ul class="check-list">
+          <li><span class="tick">✓</span><span>Advance research that addresses practical challenges in civil engineering.</span></li>
+          <li><span class="tick">✓</span><span>Develop sustainable materials and structures suited to conditions in Vietnam.</span></li>
+          <li><span class="tick">✓</span><span>Strengthen national and international collaboration and academic exchange.</span></li>
+          <li><span class="tick">✓</span><span>Educate and develop highly skilled civil engineers and researchers.</span></li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>Partnerships and collaboration</h3>
+        <ul class="check-list">
+          <li><span class="tick">✓</span><span>Collaborate with universities and research institutes in Vietnam and internationally.</span></li>
+          <li><span class="tick">✓</span><span>Undertake research, consultancy and technology transfer with industry and local communities.</span></li>
+          <li><span class="tick">✓</span><span>Address challenges in sustainable infrastructure, climate change and urban development.</span></li>
+          <li><span class="tick">✓</span><span>Encourage open scholarship, interdisciplinary collaboration and the development of early-career researchers.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="lien-he">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Contact us</div>
+        <h2>Collaborate with SMS</h2>
+        <p>We welcome academic exchange, research partnerships, student supervision and joint project development.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-panel">
+          <h3>Get in touch</h3>
+          <p>Sustainable Materials and Structures (SMS) Research Group</p>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="info-icon">🏛️</div>
+              <div>
+                <strong>Affiliation</strong>
+                <span>Faculty of Civil Engineering, The University of Danang – University of Science and Technology</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="info-icon">📍</div>
+              <div>
+                <strong>Address</strong>
+                <span>54 Nguyen Luong Bang Street, Da Nang, Vietnam</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="info-icon">✉️</div>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:nvchinh@dut.udn.vn">nvchinh@dut.udn.vn</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="info-icon">☎️</div>
+              <div>
+                <strong>Telephone</strong>
+                <a href="tel:+84901122777">+84 901 122 777</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="info-icon">🌐</div>
+              <div>
+                <strong>Faculty website</strong>
+                <a href="https://xaydung.dut.udn.vn" target="_blank">https://xaydung.dut.udn.vn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-side">
+          <div class="mini-box">
+            <h4>Useful links</h4>
+            <div class="link-list">
+              <a class="link-item" href="https://sms-dut.github.io" target="_blank"><span>SMS website</span><span class="arrow">↗</span></a>
+              <a class="link-item" href="https://xaydung.dut.udn.vn" target="_blank"><span>Faculty of Civil Engineering</span><span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>© <span id="year"></span> Sustainable Materials and Structures (SMS) Research Group · Faculty of Civil Engineering · The University of Danang – University of Science and Technology</div>
+    <div>Towards a sustainable built environment</div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu(){
+    document.getElementById('navMenu').classList.toggle('show');
+  }
+  function closeMenu(){
+    document.getElementById('navMenu').classList.remove('show');
+  }
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.querySelectorAll('.member-pub-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const section = document.querySelector(link.getAttribute('href'));
+      if (section) section.open = true;
+    });
+  });
+  if (location.hash.startsWith('#pub-')) {
+    const section = document.querySelector(location.hash);
+    if (section && section.matches('.publication-group')) section.open = true;
+  }
+
+  // Preserve the current section when switching between the static editions.
+  function syncLanguageLinks(){
+    document.querySelectorAll('[data-language-link]').forEach(link => {
+      const page = link.getAttribute('hreflang') === 'en' ? 'en.html' : 'index.html';
+      link.setAttribute('href', page + window.location.hash);
+    });
+  }
+  syncLanguageLinks();
+  window.addEventListener('hashchange', syncLanguageLinks);
+</script>
+
+</body>
+</html>
